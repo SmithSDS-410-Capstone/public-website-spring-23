@@ -1,0 +1,156 @@
+---
+title: "Day Five: Thick Data for Big Data"
+subtitle: "SDS 237: Data Ethnography"
+author: |
+  Lindsay Poirier<br/>
+  <span style = 'font-size: 70%;'>
+  [Statistical & Data Sciences](http://www.smith.edu/sds), Smith College<br/>
+  </span>
+date: |
+  Spring 2022<br/>
+  `r sds::img_logo(width = 64)`
+output:
+  sds::moon_reader:
+    lib_dir: libs
+    css: xaringan-custom.css
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+```
+
+```{r xaringan-themer, include=FALSE}
+# sds::duo_smith()
+sds::mono_light_smith()
+```
+
+# Announcements
+
+* You will be assigned project groups by Wednesday.
+* Your first group project - the team contract - will be due next week. This will be posted on Wednesday.
+* Reminder: All course slides are posted on our course website under Announcements. 
+* DM me by next Wednesday if you'd like to lead class discussion. 
+
+---
+
+class: center, middle
+# What were three takeaways from class on Monday?
+
+---
+
+class: center, middle
+# Imagine you were an ethnographer attending Astro Hack Week. Write a quantitative research question for a study you might conduct. Now write a qualitative research question. 
+
+
+---
+
+# Turn to your neighbor and discuss:
+
+* How would these research projects look different?
+
+---
+
+# Discliplinary Conventions
+
+* What is considered a relevant research question?
+* What kind of arguments are made?
+* What kind of data is collected/produced/presented?
+* How is collaboration valued?
+* When/how is data shared?
+
+
+---
+
+# Disciplinary Genres
+
+* Is text written in active or passive voice? Personal pronouns?
+* Are subheadings chosen based on academic conventions?
+* What kind of evidence is presented to persuade the reader? Statistics? Anecdotes?
+* In what ways are research methods explicated?
+* How and with what sort of detail are objects of study described?
+* What role do poetics and metaphor play in the text? Can you identify emotion?
+* What reflexive moves (self-reflection) does the author make? How do they elaborate their standpoint in/through the text?
+ 
+
+---
+
+# What is ethnography?
+
+* Study of human cultures
+  * Culture often defined as "semiotic"
+  * Ethnographers aim to interpret the underlying meanings of surface actions and expressions
+  * Make the "familiar strange"
+* Often characterized as interpretivist and qualitative
+* Typically involves extended, immersive fieldwork
+* Has historically been a solo discipline
+* Qualitative data rarely shared
+
+---
+
+# Methods of Ethnography
+
+* Participant Observation
+  * Observing interaction and behaviors "in the field"
+* Interviewing
+  * Engaging in semi-structured conversations with informants
+* Archival Research
+  * Curating and interpreting historical documents and artifacts
+* Discourse analysis
+  * Interpreting the cultural meaning interwoven in texts and speech
+  
+---
+
+# Tools of Ethnography
+
+* Field Notebooks
+  * Document thick descriptions of observations
+* Recording Devices
+  * Audio and video documentation of interviews
+* Coding Software
+  * Draw out consistent themes of notes and interviews
+  
+---
+
+# What is thick description?
+
+.pull-left[
+![](https://images.pexels.com/photos/8159657/pexels-photo-8159657.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)
+
+]
+
+.pull-right[
+
+* Describe in the "thinnest" terms possible what is happening in this image.
+* Thick description moves towards interpreting its cultural meaning.
+* Example drawn from a famous 1973 chapter by Clifford Geertz: "Thick Description: Towards an Interpretive Theory of Culture."
+
+]
+
+
+---
+
+
+class: center, middle
+# How might we interpret the role of hex stickers in the R community?
+![](https://miro.medium.com/max/1400/1*JX6yfzlNuImKJwzjSXr47w.png)
+Image source: Beiers, Sophie. 2020. "Tips & Tricks from the Newbies of Rstudio::Conf2020." *ACLU Tech & Analytics (blog)*. March 13, 2020. https://medium.com/aclu-tech-analytics/tips-tricks-from-the-newbies-of-rstudio-conf2020-5ccc780ba0e7.
+
+---
+
+class: center, middle
+# What were three takeaways from today?
+
+---
+
+# For Wednesday
+
+* Let me know if you'd like to lead a class discussion
+* Be on the lookout for project group posting
+* Reading for Wednesday
+  * What are Biruk's research questions?
+  * What does Biruk make known about her assumptions/beliefs/values as she begins to interpret data?
+

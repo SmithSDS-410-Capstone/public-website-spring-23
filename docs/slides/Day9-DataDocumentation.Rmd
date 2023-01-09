@@ -1,0 +1,124 @@
+---
+title: "Day Nine: Data Documentation"
+subtitle: "SDS 237: Data Ethnography"
+author: |
+  Lindsay Poirier<br/>
+  <span style = 'font-size: 70%;'>
+  [Statistical & Data Sciences](http://www.smith.edu/sds), Smith College<br/>
+  </span>
+date: |
+  Spring 2022<br/>
+  `r sds::img_logo(width = 64)`
+output:
+  sds::moon_reader:
+    lib_dir: libs
+    css: xaringan-custom.css
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+```
+
+```{r xaringan-themer, include=FALSE}
+# sds::duo_smith()
+sds::mono_light_smith()
+```
+
+class: center, middle
+# What were some takeaways from Monday's class?
+
+---
+
+class: center, middle
+# How do we define metadata?
+
+---
+
+# 5 W's of Metadata
+
+![](img/five-ws.png)
+
+---
+
+class: center, middle
+# Why is metadata important?
+
+---
+
+# Example: Library Catalog
+
+.pull-left[
+![](img/df.png)
+]
+
+.pull-right[
+![](img/df-metadata.png)
+]
+
+---
+
+# Metadata Schemas
+
+* A standardized labeling system for cataloging or describing data
+* Enables search engines to index data by certain criteria
+* Examples:
+  * Sort by "date created"
+  * Retrieve all results from a specific "author/creator"
+  * Filter results to a specific "subject"
+  * Exclude results from a specific "publisher"
+
+
+---
+
+# Example: Citation Manager
+
+.pull-left[
+![](img/counting-metadata.png)
+]
+
+.pull-right[
+![](img/counting-meta.png)
+]
+
+---
+
+# Example: Citation Manager
+
+![](img/itunes-metadata.png)
+
+---
+
+class: center, middle
+# What’s the difference between administrative and descriptive metadata?
+
+---
+
+![](img/open-metadata.png)
+  
+---
+
+# Data Dictionaries
+
+* Documents for holding descriptive metadata
+* Define the variables in a dataset and the values that may fill in those variables
+* Are not always as descriptive as we'd like them to be
+
+---
+
+class: center, middle
+# Example: NYC Metadata for All
+
+![](img/qrcode_opendata.cityofnewyork.us.png)
+
+---
+
+# For Monday
+
+* Questions to consider:
+  * What does Biruk mean when they refer to "translation" in this chapter?
+  * Where do we see looping effects in this chapter? What gets "lost in translation"?
+

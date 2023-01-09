@@ -1,0 +1,99 @@
+---
+title: "Day Eleven: Ethnographies of Infrastructure"
+subtitle: "SDS 237: Data Ethnography"
+author: |
+  Lindsay Poirier<br/>
+  <span style = 'font-size: 70%;'>
+  [Statistical & Data Sciences](http://www.smith.edu/sds), Smith College<br/>
+  </span>
+date: |
+  Spring 2022<br/>
+  `r sds::img_logo(width = 64)`
+output:
+  sds::moon_reader:
+    lib_dir: libs
+    css: xaringan-custom.css
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+```
+
+```{r xaringan-themer, include=FALSE}
+# sds::duo_smith()
+sds::mono_light_smith()
+```
+
+class: center, middle
+# What were some takeaways from Wednesday's class?
+
+---
+
+class: center, middle
+# Identify something that meets Star's definition of an infrastructure. Jot down some ideas about how.when this infrastructure has broken down.
+
+---
+
+# Turn to your neighbor and discuss:
+
+* How often do you think about this infrastructure? Did you notice it pre-breakdown?
+* Who has a say in the design of this infrastructure, and who is excluded?
+
+---
+
+# Measuring Contaminants
+
+.pull-left[
+* Levels are not set based on potential impact to human health or degree of environmental degradation
+* Levels are set based on the degree of precision that can be achieved by all laboratories
+]
+
+.pull-right[
+* Minimum Reporting Levels for water pollution: minimum concentration at which EPA requires contaminant detections to be reported
+
+![](https://2.bp.blogspot.com/-y2WvpoAFqUI/XH8KX5zmWeI/AAAAAAAADaE/q3k_hOiiR6I-f78HvFoKNO5dmRypVL2wgCLcBGAs/s400/UCMR.png)
+]
+
+---
+
+# Counting Deaths
+
+.pull-left[
+* Standards for coding information death certifications such as standard definitions of "death"
+* Classification systems such as Sex and Race categories and Causes of Death
+* Electronic systems for reporting local data to counties to states to federal (NVSS)
+]
+
+.pull-right[ 
+* Systems for producing and archiving death certificates
+
+![](https://www.healthdata.org/sites/default/files/files/ActingOnData/2018/AOD_Death-Certificate-CDC_2018.PNG) 
+]
+
+---
+
+class: center, middle
+# Other examples? Databases? Packages?
+
+---
+
+# Case Study: Deforestation
+
+* Select one team member to take notes and another team member to serve as an ambassador. 
+* Imagine that your team has been hired by US to study deforestation in one of your team member’s home states. 
+* To do so you will compare satellite data of forests in 2010 to satellite data today. 
+* ...but first your team needs to decide what counts as a forest. 
+* Together come up with a standard definition of a forest. Your definition should be **specific**. How are we going to figure out what land to include or exclude in the study? Jot this definition down.
+
+---
+
+# For Monday
+
+* Questions to consider:
+  * What's the difference between a prototypical and Aristotelian classification?
+  * What cultural narratives can we draw from studying classifications?
+

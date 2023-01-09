@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Grading Contract</title>
+
+<script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+
+
+
+
+
+<link rel="stylesheet" href="css/custom.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.tab('show');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">SDS 237: Data Ethnography</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Syllabus</a>
+</li>
+<li>
+  <a href="grading_contract.html">Assessment</a>
+</li>
+<li>
+  <a href="learning_dimensions.html">Learning Dimensions</a>
+</li>
+<li>
+  <a href="schedule.html">Schedule</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="https://github.com/SDS-237-Data-Ethnography/">
+    <span class="fa fa-github fa-lg"></span>
+     
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">Grading Contract</h1>
+
+</div>
+
+
+<div class="alert alert-dismissible alert-info">
+<p>Grading contracts have been theorized and implemented in the research of Dr. Peter Elbow and Dr. Asao Inoue. This grading contract is adapted from their work, along with the contracts of Dr. Kate Navickas and Dr. Kati Ahern.</p>
+</div>
+<p>This course will be using a grading contract. This means that the grade you ultimately receive for this course is primarily based on the labor that you perform rather than a subjective evaluation of the quality of your work and writing in relation to your colleagues. Your grade will be determined by the extent of your engagement in class, your timely completion of assignments, and how you support the course community. You will still attend to and work to improve the quality of your writing and thinking in this course. You will receive extensive feedback on all of your submissions (from me and from your colleagues), and you will have opportunities to revise. However, you will not receive points or an A, B, C, D, etc. on assignments.</p>
+<p>I’ve experimented with a few alternative grading systems, and I’m particularly excited to continue engaging this system this semester as I believe it aligns with my overarching goals for the course. In this course I am less concerned with your ability to come to a specific answer, to master certain procedures, or to produce standardized deliverables. I’m more concerned with the extent to which this course enables you become more perceptive to data environments, to deepen your critical thinking about data’s cultural meanings, to experiment with your thinking and writing, and to grapple with ethical dilemmas. There’s always room for strengthening these thinking modes further; in fact, every time I teach this course, I find that my own ability to think critically about data deepens through classroom discussions and my reading of student work.</p>
+<p>There are many benefits to contract grading. Here are there reasons why I’ve opted for a grading contract in this course:</p>
+<ul>
+<li>I want you to feel as though you can experiment with your writing in this course. Rather than focusing on what you think I want out of your assignments or “writing to the rubric,” grading contracts empower you to take more risks.</li>
+<li>Grading contracts value the time and effort you put into the course and reward students who invest extra time in their learning.</li>
+<li>Grading contracts make it easier for you to anticipate the grade you will receive and plan for achieving that grade.</li>
+<li>Grading contracts promote equity. With grades based entirely on labor, students aren’t penalized for not entering the course with the same experience or background knowledge as their colleagues.</li>
+</ul>
+<div id="grade-breakdown" class="section level2">
+<h2>Grade Breakdown</h2>
+<p>Each row indicates what labor you need to complete in the course to earn the grade indicated in the first column of that row. Note that to earn a particular grade <em>all</em> minimum labor criteria in the corresponding row must be met.</p>
+<table>
+<colgroup>
+<col width="10%" />
+<col width="13%" />
+<col width="16%" />
+<col width="21%" />
+<col width="13%" />
+<col width="13%" />
+<col width="10%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">Grade</th>
+<th align="center">Completed Journal Entries (out of 5)</th>
+<th align="center">Completed Mini-projects</th>
+<th align="center">Completed Checkpoints for Final Project</th>
+<th align="center">Completed Reading Annotations</th>
+<th align="center">Community Labor Points</th>
+<th align="center">Enrichment</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">A</td>
+<td align="center">4 or more</td>
+<td align="center">2 + 1 substantive revision</td>
+<td align="center">1 group contract + 1 draft + 1 final project</td>
+<td align="center">10 or more</td>
+<td align="center">8 or more</td>
+<td align="center">3</td>
+</tr>
+<tr class="even">
+<td align="center">B</td>
+<td align="center">4 or more</td>
+<td align="center">2 + 1 substantive revision</td>
+<td align="center">1 group contract + 1 draft + 1 final project</td>
+<td align="center">10 or more</td>
+<td align="center">8 or more</td>
+<td align="center">0</td>
+</tr>
+<tr class="odd">
+<td align="center">C</td>
+<td align="center">3 or more</td>
+<td align="center">1 + 1 substantive revision</td>
+<td align="center">1 group contract + 1 draft + 1 final project</td>
+<td align="center">8 or more</td>
+<td align="center">6 or more</td>
+<td align="center">0</td>
+</tr>
+<tr class="even">
+<td align="center">D</td>
+<td align="center">2 or more</td>
+<td align="center">1, no revision</td>
+<td align="center">1 group contract + 1 draft + 1 final project</td>
+<td align="center">6 or more</td>
+<td align="center">4 or more</td>
+<td align="center">0</td>
+</tr>
+<tr class="odd">
+<td align="center">E</td>
+<td align="center">1 or fewer</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">5 or fewer</td>
+<td align="center">3 or fewer</td>
+<td align="center">0</td>
+</tr>
+</tbody>
+</table>
+<p>Descriptions of all written and project assignments, along with rubrics for qualitative assessment of each, will be made available to you in the GitHub repositories where you will submit work this semester. For an assignment to be considered complete, it must meet the minimum criteria outlined in the assignment description. It also must be completed “in good faith” - meaning in a way that demonstrates integrity to the spirit of the assignment.</p>
+<p>Below I’ve outlined completion criteria for the two non-written assignments for this course.</p>
+<div id="reading-annotations" class="section level3">
+<h3>Reading Annotations</h3>
+<p>Each week a selection of course readings will be posted as a single assignment on Perusall - a system for students to collaboratively annotate course readings. To earn this credit, you will be expected to post 3 quality annotations per assignment to Perusall. (Note that a single assignment can have multiple readings, but you need only submit 3 annotations total. You do not need to annotate every reading in the assignment.) A quality annotation is one in which you synthesize concepts, ask thought-provoking questions, or connect ideas to external issues. I have found that students get the most out of Perusall when they respond to each other’s annotations. Annotations must be completed before class to receive credit.</p>
+</div>
+<div id="community-labor" class="section level3">
+<h3>Community Labor</h3>
+<p>Ethnography is at its best when it involves collaborative inquiry and interpretation. Because of this, I want to encourage us to foster a cooperative community in our classroom. Ethnographers know that building and sustaining strong communities are important and often invisible forms of labor. In an effort to foreground and reward that labor, I’ve built opportunities to contribute to the course community into our grading contract. There are three opportunities for earning community labor points in this course. <em>It will be your responsibility to keep track of your community labor via our course labor log (see FAQ).</em></p>
+<div id="contributing-on-slack" class="section level4">
+<h4>Contributing on Slack</h4>
+<p>The first opportunity for earning community labor points is through posting in the <code>#sds-237-discussions</code> Slack channel. For every conversation that you initiate in this channel, you will earn 1 community labor point. For every conversation that you respond to in this channel with substantive summary, critique, or reflection, you will earn 1 community labor point.</p>
+</div>
+<div id="completing-group-evaluations" class="section level4">
+<h4>Completing Group Evaluations</h4>
+<p>Mid-way through the semester you will have an opportunity to evaluate your own contributions to your group work, along with that of your peers. Your feedback will be shared with members of your group. Completing group evaluations will count for 2 community labor points.</p>
+</div>
+<div id="participating-in-peer-review-workshops" class="section level4">
+<h4>Participating in Peer Review Workshops</h4>
+<p>Throughout the semester, I will set up workshops where students may submit their written work for peer review in preparation for assignment submissions. Each peer review workshop that you participate in will count for 2 community labor points.</p>
+<p>Note that throughout the semester, I may offer additional opportunities to earn community labor points as unexpected forms of course labor arise.</p>
+<div class="alert alert-dismissible alert-info">
+The final project will be completed in groups, and considerable chunks of the group project will be completed in class on Thursdays. While I will not formally be taking attendance for this course, I reserve the right to adjust your final grade by a letter grade if you’ve missed more than three classes involving final project group work. Be sure to reach out to me early on if there are extenuating circumstances that will consistently impact your attendance.
+</div>
+</div>
+</div>
+</div>
+<div id="faq" class="section level2">
+<h2>FAQ</h2>
+<div id="FAQ" class="panel-group" role="tablist" aria-multiselectable="true">
+<div class="panel panel-primary" id="FAQ-0">
+<div id="FAQ-0-heading" class="panel-heading" role="tab" data-toggle="collapse" data-target="#FAQ-0-collapse" data-parent="#FAQ" aria-expanded="true" aria-controls="FAQ-0-collapse" style="cursor: pointer;">
+<h4 class="panel-title">What do I need to do to earn an A in this course?</h4>
+</div>
+<div aria-labelledby="FAQ-0-heading" class="panel-collapse collapse in" id="FAQ-0-collapse" role="tabpanel">
+<div class="panel-body" style=""><p>&#39;A&#39; grades will be assigned to students that meet the requirements to earn a &#39;B&#39; in the course and enrich those assignments by completing three additional reflective assignments. Prompts for these assignments will be included in the GitHub repository for your learning portfolio. The deadline for completion of enrichment assignments is the last day class meets. It will be the students&#39; responsibility to stay on top of completion of these assignments. Furthermore, enrichment assignments completed prior to the last two weeks of class will receive more substantive feedback from me than assignments completed in the last two weeks. </p>
+</div>
+</div>
+</div>
+<div class="panel panel-primary" id="FAQ-1">
+<div id="FAQ-1-heading" class="panel-heading" role="tab" data-toggle="collapse" data-target="#FAQ-1-collapse" data-parent="#FAQ" aria-expanded="true" aria-controls="FAQ-1-collapse" style="cursor: pointer;">
+<h4 class="panel-title">What kind of feedback will I receive regarding my work?</h4>
+</div>
+<div id="FAQ-1-collapse" class="panel-collapse collapse" role="tabpanel" aria-labelledby="FAQ-1-heading">
+<div class="panel-body" style="">You will receive extensive feedback on all of your submissions (from me and from your colleagues), and you will have opportunities to revise. I will also provide rubrics for most assignments to indicate how I will evaluate your work. However, you will not receive points or an A, B, C, D, etc. on individual assignments.</div>
+</div>
+</div>
+<div class="panel panel-primary" id="FAQ-2">
+<div id="FAQ-2-heading" class="panel-heading" role="tab" data-toggle="collapse" data-target="#FAQ-2-collapse" data-parent="#FAQ" aria-expanded="true" aria-controls="FAQ-2-collapse" style="cursor: pointer;">
+<h4 class="panel-title">There appear to be a significant number of assignments and deadlines in this course. Why is this the case?</h4>
+</div>
+<div id="FAQ-2-collapse" class="panel-collapse collapse" role="tabpanel" aria-labelledby="FAQ-2-heading">
+<div class="panel-body" style="">I'll admit that this is a labor-intensive course. However, I've found the the syllabus appears more intimidating than the actual workload turns out to be. I've been very deliberate in pacing your assignments for two reasons - first, because developing the critical thinking skills required of ethnography demands building and consistently practicing observational habits, and second, to ensure there is plenty of time for you to revise work based on my feedback. If you are struggling with this course's workload, I recommend coming to talk with me in office hours.</div>
+</div>
+</div>
+<div class="panel panel-primary" id="FAQ-3">
+<div id="FAQ-3-heading" class="panel-heading" role="tab" data-toggle="collapse" data-target="#FAQ-3-collapse" data-parent="#FAQ" aria-expanded="true" aria-controls="FAQ-3-collapse" style="cursor: pointer;">
+<h4 class="panel-title">How can I best keep track of my labor in this course?</h4>
+</div>
+<div id="FAQ-3-collapse" class="panel-collapse collapse" role="tabpanel" aria-labelledby="FAQ-3-heading">
+<div class="panel-body" style="">Throughout the semester, you will be asked to keep track of your labor via a log that I will make available on Moodle. I will reference this log to calculate certain aspects of your final grade. Instructions for using the labor log will be provided in the first week of the course.</div>
+</div>
+</div>
+<div class="panel panel-primary" id="FAQ-4">
+<div id="FAQ-4-heading" class="panel-heading" role="tab" data-toggle="collapse" data-target="#FAQ-4-collapse" data-parent="#FAQ" aria-expanded="true" aria-controls="FAQ-4-collapse" style="cursor: pointer;">
+<h4 class="panel-title">Can I earn +/- grades in this course?</h4>
+</div>
+<div id="FAQ-4-collapse" class="panel-collapse collapse" role="tabpanel" aria-labelledby="FAQ-4-heading">
+<div class="panel-body" style="">+/- will be assigned to final grades at my discretion in cases where a student's work consistently exceeds the expectations (+) of their contracted grade or is in some way insufficient (-). Students can track their progress towards a grade modifier in feedback that I provide throughout the semester.</div>
+</div>
+</div>
+<div class="panel panel-primary" id="FAQ-5">
+<div id="FAQ-5-heading" class="panel-heading" role="tab" data-toggle="collapse" data-target="#FAQ-5-collapse" data-parent="#FAQ" aria-expanded="true" aria-controls="FAQ-5-collapse" style="cursor: pointer;">
+<h4 class="panel-title">What if I need an extension on an assignment?</h4>
+</div>
+<div id="FAQ-5-collapse" class="panel-collapse collapse" role="tabpanel" aria-labelledby="FAQ-5-heading">
+<div class="panel-body" style="">There is a 24-hour grace period on all written assignments, except for reading annotations. There will be no penalties for submitting the written assignment within this 24-hour period, and you do not need to inform me that you intend to take the extra time. You can also request up to a 72-hour extension on any written assignment, as long *as you make that request at least 48 hours before the original assignment due date*. You can request an extension by filling out the Extension Request form on Moodle, and I will confirm your extension on Slack. Beyond this, late assignments will not be accepted.</div>
+</div>
+</div>
+<div class="panel panel-primary" id="FAQ-6">
+<div id="FAQ-6-heading" class="panel-heading" role="tab" data-toggle="collapse" data-target="#FAQ-6-collapse" data-parent="#FAQ" aria-expanded="true" aria-controls="FAQ-6-collapse" style="cursor: pointer;">
+<h4 class="panel-title">Can I ask for extensions or use the grade period for reading annotations?</h4>
+</div>
+<div id="FAQ-6-collapse" class="panel-collapse collapse" role="tabpanel" aria-labelledby="FAQ-6-heading">
+<div class="panel-body" style="">Reading assignments/Perusall annotations prepare you to participate in class discussions. For this reason, they need to be completed by the due date for credit. I've provided considerable leeway to miss a reading annotation assignment from time-to-time in order to accommodate flexibility in this regard.</div>
+</div>
+</div>
+<div class="panel panel-primary" id="FAQ-7">
+<div id="FAQ-7-heading" class="panel-heading" role="tab" data-toggle="collapse" data-target="#FAQ-7-collapse" data-parent="#FAQ" aria-expanded="true" aria-controls="FAQ-7-collapse" style="cursor: pointer;">
+<h4 class="panel-title">An assignment deadline is approaching, and I'm unhappy with the quality of my work. What should I do?</h4>
+</div>
+<div id="FAQ-7-collapse" class="panel-collapse collapse" role="tabpanel" aria-labelledby="FAQ-7-heading">
+<div class="panel-body" style="">While I always encourage students to strive to submit the best work they can, this course's grading contract, coupled with the course's revision assignments, permits you to submit work that you know you want to continue to improve upon without penalty. Not submitting assignments at all has the potentially to significantly lower your grade in this course, whereas submitting an assignment that could benefit from more revision will not be determinental to your grade as long as the minimum sumbission requirements are met.</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = false;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

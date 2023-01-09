@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+<meta name="author" content="Lindsay Poirier" />
+
+
+<title>SDS 237: Data Ethnography</title>
+
+<script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+
+
+
+
+
+<link rel="stylesheet" href="css/custom.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.tab('show');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">SDS 237: Data Ethnography</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Syllabus</a>
+</li>
+<li>
+  <a href="grading_contract.html">Assessment</a>
+</li>
+<li>
+  <a href="learning_dimensions.html">Learning Dimensions</a>
+</li>
+<li>
+  <a href="schedule.html">Schedule</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="https://github.com/SDS-237-Data-Ethnography/">
+    <span class="fa fa-github fa-lg"></span>
+     
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">SDS 237: Data Ethnography</h1>
+<h4 class="author">Lindsay Poirier</h4>
+<h4 class="date">Last updated on 2022-02-01</h4>
+
+</div>
+
+
+<div id="syllabus" class="section level1">
+<h1>Syllabus</h1>
+<div class="float_image_right">
+<div class="figure">
+<img src="img/sds237logo.png" alt="Course logo designed by Zoe Scheffler, Fall '21" width="200px" />
+<p class="caption">
+Course logo designed by Zoe Scheffler, Fall ’21
+</p>
+</div>
+</div>
+<p>Without rich documentation, quantitative data can strip away critical context needed to interpret values responsibly. This course introduces students to the theory and practice of data ethnography, demonstrating how qualitative data collection and analysis can be brought to bear on the study of data settings and artifacts. Through experiential exercises, students will learn techniques in field-note writing, participant observation, in-depth interviewing, documentary analysis, and archival research and how they may be used to contextualize the cultural underpinnings of datasets. Students will learn how to visualize datasets in ways that foreground their socio-political provenance in R. Students will also learn how ethnographic methods can be leveraged to improve data documentation and communication. The course will introduce debates regarding the politics of techno-scientific fieldwork. Upon completion of this course, you should be able to:</p>
+<ol style="list-style-type: decimal">
+<li>Recognize, interpret, and communicate the cultural underpinnings of data resources, infrastructures, and practices</li>
+<li>Define and engage principal methods of ethnography and communicate when and how they may be used in the study of data</li>
+<li>Strategically apply relevant ethnographic methods to the study of a data setting or artifact</li>
+<li>Produce data documentation and visualizations that account for the cultural contexts of data production, categorization, measurement, and use</li>
+</ol>
+<p>Classes will be held on Mondays and Wednesdays from 9:25 PM to 10:40 PM.</p>
+<div id="course-instructor" class="section level2">
+<h2>Course Instructor</h2>
+<div class="float_image_right">
+<div class="figure">
+<img src="https://www.smith.edu/sites/default/files/styles/img-faculty-detail/public/media/Faculty/Lindsay-Poirier.jpg?itok=e_p62zj6" alt="Lindsay Poirier, she/her/hers" width="200px" />
+<p class="caption">
+Lindsay Poirier, she/her/hers
+</p>
+</div>
+</div>
+<p>I am a cultural anthropologist that studies how civic data gets produced, how communities think about and interface with data, and how data infrastructure can be designed more equitably. My Ph.D. is in an interdisciplinary discipline called Science and Technology Studies - a field that studies the intricate ways science, technology, culture, and politics all co-constitute each other. I work on a number of collaborative research projects that leverage public data to deepen understanding of social and environmental inequities in the US, while also qualitatively studying the politics behind data gaps and inconsistencies. As an instructor, I prioritize active learning and often structure courses as flipped classrooms. You can expect in-class time to predominantly involve group activities and live problem-solving exercises.</p>
+</div>
+<div id="pedagogical-partner" class="section level2">
+<h2>Pedagogical Partner</h2>
+<p>Rose Evard (she/her) is a ’23 Biology and Statistics &amp; Data Science double major who took SDS 237 last semester. She’s passionate about bringing data science principles and strategies into her biology research. She has been involved in various forms of student support, including working as a Data Assistant and SDS Tutor last semester. Rose can provide technical guidance for GitHub and R, as well as advice on how to approach the course and assignments.</p>
+<div id="getting-in-touch" class="section level3">
+<h3>Getting in Touch</h3>
+<div id="connecting" class="panel-group" role="tablist" aria-multiselectable="true">
+<div class="panel panel-info" id="connecting-0">
+<div id="connecting-0-heading" class="panel-heading" role="tab" data-toggle="collapse" data-target="#connecting-0-collapse" data-parent="#connecting" aria-expanded="true" aria-controls="connecting-0-collapse" style="cursor: pointer;">
+<h4 class="panel-title">Slack</h4>
+</div>
+<div aria-labelledby="connecting-0-heading" class="panel-collapse collapse in" id="connecting-0-collapse" role="tabpanel">
+<div class="panel-body" style=""><p>The best way to get in touch with me is via Slack. I can&#39;t guarantee that I will respond to messages sent via email. If you have course related questions, I encourage you to ask them in the <code>#sds-237-questions</code> channel. When discretion is needed, feel free to DM. Please reserve more formal concerns like grades or accommodation requests for an in-person (or in-person virtual) conversation. </p>
+
+<p><em>During the week, I will try my best to answer all Slack messages within 24 hours of receiving them. Please note that to maintain my own work-life balance, I often don&#39;t answer Slack messages on the weekends. It&#39;s important that you plan when you start your assignments accordingly.</em></p>
+</div>
+</div>
+</div>
+<div class="panel panel-info" id="connecting-1">
+<div id="connecting-1-heading" class="panel-heading" role="tab" data-toggle="collapse" data-target="#connecting-1-collapse" data-parent="#connecting" aria-expanded="true" aria-controls="connecting-1-collapse" style="cursor: pointer;">
+<h4 class="panel-title">Student Consultation Hours</h4>
+</div>
+<div id="connecting-1-collapse" class="panel-collapse collapse" role="tabpanel" aria-labelledby="connecting-1-heading">
+<div class="panel-body" style=""><p>Student consultation hours are a great opportunity for us to chat about what you&#39;re learning in the course, clarify expectations on assignments, and review work in progress. I also love when students drop in to consultation hours to request book recommendations, discuss career or research paths, or just to say hi! I encourage each student in the course to join consultation hours at least once this semester. The link to connect to consultation hours is listed in Moodle. If you&#39;re unable to attend my consultation hours at the regularly scheduled time, there is link on Moodle to book a meeting with me. </p>
+
+<ul>
+<li>Monday, 2-3</li>
+<li>Wednesday, 3-4</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="course-texts" class="section level2">
+<h2>Course Texts</h2>
+<p>This semester we will be reading Crystal Biruk’s <a href="https://www.dukeupress.edu/cooking-data"><strong>Cooking Data: Culture and Politics in an African Research World</strong></a>. The book should be available at the Smith bookstore. I will make all other course readings available on Perusall, which can be accessed through our course Moodle page.</p>
+</div>
+<div id="assessment" class="section level2">
+<h2>Assessment</h2>
+<p>This course will be graded via a <a href="grading_contract.html">grading contract</a>.</p>
+</div>
+<div id="course-policies-expectations-and-support" class="section level2">
+<h2>Course Policies, Expectations, and Support</h2>
+<div id="policies" class="panel-group" role="tablist" aria-multiselectable="true">
+<div class="panel panel-primary" id="policies-0">
+<div id="policies-0-heading" class="panel-heading" role="tab" data-toggle="collapse" data-target="#policies-0-collapse" data-parent="#policies" aria-expanded="true" aria-controls="policies-0-collapse" style="cursor: pointer;">
+<h4 class="panel-title">Preparation</h4>
+</div>
+<div aria-labelledby="policies-0-heading" class="panel-collapse collapse in" id="policies-0-collapse" role="tabpanel">
+<div class="panel-body" style=""><p>This is a 4-credit course with 3 hours per week of in-classroom instructions. Smith expects students to devote 9 out-of-class hours per week to 4-credit classes. I have designed the course assignments and selected the course readings with this target in mind.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-primary" id="policies-1">
+<div id="policies-1-heading" class="panel-heading" role="tab" data-toggle="collapse" data-target="#policies-1-collapse" data-parent="#policies" aria-expanded="true" aria-controls="policies-1-collapse" style="cursor: pointer;">
+<h4 class="panel-title">Attendance</h4>
+</div>
+<div id="policies-1-collapse" class="panel-collapse collapse" role="tabpanel" aria-labelledby="policies-1-heading">
+<div class="panel-body" style=""><p>Classroom discussions and activities will provide you with an opportunity to work through complex concepts and apply and reflect on what you&#39;ve learned in course readings in collaboration with your colleagues. Attending class is not only supporting your own success in this course, but is also an act of community. I will not be formally taking attendance in this course, but certain criteria for your final grade can only be demonstrated through regular attendance in classroom discussions, so I expect students to be present when possible. Missing more than three classes involving final project group work can impact your grade by a letter grade. Up until your fourth absence, you do not need to tell me when you plan to be absent from class. Upon your fourth absence, please reach out to me via Slack. If you are sick, please stay home. </p>
+</div>
+</div>
+</div>
+<div class="panel panel-primary" id="policies-2">
+<div id="policies-2-heading" class="panel-heading" role="tab" data-toggle="collapse" data-target="#policies-2-collapse" data-parent="#policies" aria-expanded="true" aria-controls="policies-2-collapse" style="cursor: pointer;">
+<h4 class="panel-title">Late Assignments</h4>
+</div>
+<div id="policies-2-collapse" class="panel-collapse collapse" role="tabpanel" aria-labelledby="policies-2-heading">
+<div class="panel-body" style=""><p>I understand that you will sometimes need to prioritize other things over meeting assignment deadlines (e.g. your health, wellness, families, communities, jobs, other coursework). However, there are a number of reasons that I find enforcing deadlines to be supportive of student learning in this course: </p>
+
+<ol>
+<li>First, one of the key aims of assignments in this course is to support you in learning to become more perceptive to data environments surrounding you. Because of this I&#39;ve deliberately spread course assignments out over the semester in order to help you gain practice in consistently paying attention to these environments. This critical mode of thinking can&#39;t be cultivated effectively if the work is being crammed into later parts of the semester. </li>
+<li>Second, because this course emphasizes student growth over achievement, I also want to ensure that I can provide feedback on your writing in time for you to incorporate it into future assignments. </li>
+</ol>
+
+<p>My late policy attempts to balance flexibility with accountability. There is a 24-hour grace period on all written assignments. There will be no penalties for submitting the written assignment within this 24-hour period, and you do not need to inform me that you intend to take the extra time. You can also request up to a 72-hour extension on any written assignment, as long <em>as you make that request at least 48 hours before the original assignment due date</em>. You can request an extension by filling out the Extension Request form on Moodle, and I will confirm your extension on Slack. Beyond this, late assignments will not be accepted. </p>
+
+<p>Note that this policy does not apply to reading assignments/Perusall annotations. <em>Reading assignments/Perusall annotations need to be completed by the due date for credit.</em></p>
+</div>
+</div>
+</div>
+<div class="panel panel-primary" id="policies-3">
+<div id="policies-3-heading" class="panel-heading" role="tab" data-toggle="collapse" data-target="#policies-3-collapse" data-parent="#policies" aria-expanded="true" aria-controls="policies-3-collapse" style="cursor: pointer;">
+<h4 class="panel-title">Participation</h4>
+</div>
+<div id="policies-3-collapse" class="panel-collapse collapse" role="tabpanel" aria-labelledby="policies-3-heading">
+<div class="panel-body" style=""><p>Active participation in this course is generally expected and encouraged. That said, we all have off-days - be it from illness, sadness, heartbreak, or exhaustion. I too will have off-days where my words just don&#39;t seem to cohere, or my brain will feel jumbled. Because of this, I&#39;ve provided a number of ways to demonstrate engagement throughout the semester.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-primary" id="policies-4">
+<div id="policies-4-heading" class="panel-heading" role="tab" data-toggle="collapse" data-target="#policies-4-collapse" data-parent="#policies" aria-expanded="true" aria-controls="policies-4-collapse" style="cursor: pointer;">
+<h4 class="panel-title">Course Readings</h4>
+</div>
+<div id="policies-4-collapse" class="panel-collapse collapse" role="tabpanel" aria-labelledby="policies-4-heading">
+<div class="panel-body" style=""><p>I have put a lot of thought into the assigned readings for this course - aiming to select pieces that are relevant, engaging, challenging, accessible, and represent a diverse set of voices. Our classroom discussions will be much richer, more meaningful, and fun when all students come to class having completed and annotated assigned course readings. While I know that reading may seem like a low priority when you have impending assignments that you need to physically hand-in, I encourage you not to wait until the last minute to complete course readings. You will get the most out of the content if you give yourself time to digest and reflect on it. </p>
+
+<p>If you are struggling to keep up with the readings, please reach out to me. I&#39;m more than happy to talk through effective reading strategies and to provide more guidance on what I&#39;d like you to get out of a specific piece.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-primary" id="policies-5">
+<div id="policies-5-heading" class="panel-heading" role="tab" data-toggle="collapse" data-target="#policies-5-collapse" data-parent="#policies" aria-expanded="true" aria-controls="policies-5-collapse" style="cursor: pointer;">
+<h4 class="panel-title">Academic Honesty</h4>
+</div>
+<div id="policies-5-collapse" class="panel-collapse collapse" role="tabpanel" aria-labelledby="policies-5-heading">
+<div class="panel-body" style=""><blockquote>
+<p>Smith College expects all students to be honest and committed to the principles of academic and intellectual integrity in their preparation and submission of course work and examinations. Students and faculty at Smith are part of an academic community defined by its commitment to scholarship, which depends on scrupulous and attentive acknowledgement of all sources of information, and honest and respectful use of college resources.</p>
+</blockquote>
+
+<p>Any cases of dishonesty or plagiarism will be reported to the Academic Honor Board. Examples of dishonesty or plagiarism include:</p>
+
+<ul>
+<li>Submitting work completed by another student as your own.</li>
+<li>Copying and pasting words from sources without quoting and citing the author.</li>
+<li>Paraphrasing material from another source without citing the author.</li>
+<li>Failing to cite your sources correctly. </li>
+<li>Falsifying or misrepresenting information in submitted work.</li>
+<li>Paying another student or service to complete assignments for you.</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="panel panel-primary" id="policies-6">
+<div id="policies-6-heading" class="panel-heading" role="tab" data-toggle="collapse" data-target="#policies-6-collapse" data-parent="#policies" aria-expanded="true" aria-controls="policies-6-collapse" style="cursor: pointer;">
+<h4 class="panel-title">Code of Conduct</h4>
+</div>
+<div id="policies-6-collapse" class="panel-collapse collapse" role="tabpanel" aria-labelledby="policies-6-heading">
+<div class="panel-body" style=""><p>As the instructor for this course, I am committed to making participation in this course a harassment-free experience for everyone, regardless of level of experience, gender, gender identity and expression, sexual orientation, disability, personal appearance, body size, race, ethnicity, age, or religion. Examples of unacceptable behavior by participants in this course include the use of sexual language or imagery, derogatory comments or personal attacks, trolling, public or private harassment, insults, or other unprofessional conduct.</p>
+
+<p>As the instructor I have the right and responsibility to point out and stop behavior that is not aligned to this Code of Conduct. Participants who do not follow the Code of Conduct may be reprimanded for such behavior. Instances of abusive, harassing, or otherwise unacceptable behavior may be reported by contacting the instructor.</p>
+
+<p>All students and the instructor are expected to adhere to this Code of Conduct in all settings for this course: seminars, office hours, and over Slack.</p>
+
+<p>This Code of Conduct is adapted from the <a href="https://www.contributor-covenant.org/">Contributor Covenant</a>, version 1.0.0, available <a href="https://www.contributor-covenant.org/version/1/0/0/code-of-conduct/">here</a>.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-primary" id="policies-7">
+<div id="policies-7-heading" class="panel-heading" role="tab" data-toggle="collapse" data-target="#policies-7-collapse" data-parent="#policies" aria-expanded="true" aria-controls="policies-7-collapse" style="cursor: pointer;">
+<h4 class="panel-title">Principles of Community</h4>
+</div>
+<div id="policies-7-collapse" class="panel-collapse collapse" role="tabpanel" aria-labelledby="policies-7-heading">
+<div class="panel-body" style=""><p>I hope that we can foster a collaborative and caring environment in this classroom: one that celebrates successes, respects individual strengths and weaknesses, demonstrates compassion for each other&#39;s struggles, and affirms diverse identities. Here are some ideas that I have for creating this environment in our course:</p>
+
+<ul>
+<li>If a classmate helps you out on an assignment, says something brilliant that solidifies the material for you, or just listens when you&#39;ve had a bad day, give them a shout-out on our <code>#sds-237-appreciation</code> Slack channel. </li>
+<li>Check-in with colleagues before starting collaborative work. &ldquo;What three words describe how you&#39;re feeling?&rdquo; &ldquo;Name one challenge and one success from this week.&rdquo; &ldquo;What are you doing for self-care right now?&rdquo; Thank each other for sharing where they&#39;re at.</li>
+<li>Consider when to step up and when to step back in class discussions, creating space for others to contribute. Listening is just as important to community-building as speaking. </li>
+<li>Acknowledge that there is much we don&#39;t know about how our colleagues experience the world. &hellip;but don&#39;t ask colleagues to speak on behalf of a social group you perceive them to be a part of. </li>
+<li>Cheer on colleagues as they give presentations or try something out for the first time.</li>
+<li>Ask questions often in our <code>#sds-237-questions</code> channel. Help each other out by answering questions when you can. </li>
+<li>Mistakes happen. I will certainly make mistakes in class. Admit mistakes, and then move on.</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="panel panel-primary" id="policies-8">
+<div id="policies-8-heading" class="panel-heading" role="tab" data-toggle="collapse" data-target="#policies-8-collapse" data-parent="#policies" aria-expanded="true" aria-controls="policies-8-collapse" style="cursor: pointer;">
+<h4 class="panel-title">Pronouns</h4>
+</div>
+<div id="policies-8-collapse" class="panel-collapse collapse" role="tabpanel" aria-labelledby="policies-8-heading">
+<div class="panel-body" style=""><p>Using the proper pronouns for our students is foundational to a safe, respectful classroom environment that creates a culture of trust. For information on pronouns and usage, please see the Office of Equity and Inclusion link here: <a href="https://www.smith.edu/about-smith/equity-inclusion/gender-identity/pronouns">Pronouns</a></p>
+</div>
+</div>
+</div>
+<div class="panel panel-primary" id="policies-9">
+<div id="policies-9-heading" class="panel-heading" role="tab" data-toggle="collapse" data-target="#policies-9-collapse" data-parent="#policies" aria-expanded="true" aria-controls="policies-9-collapse" style="cursor: pointer;">
+<h4 class="panel-title">Accommodations</h4>
+</div>
+<div id="policies-9-collapse" class="panel-collapse collapse" role="tabpanel" aria-labelledby="policies-9-heading">
+<div class="panel-body" style=""><p>It is my goal for everyone to succeed in this course. If you have personal circumstances that may impact your experience of our classroom, I encourage you to contact Office of Disability Services in College Hall 104 or at <a href="mailto:ods@smith.edu">ods@smith.edu</a>. The Office will generate a letter that indicates to me what kind of support you need and how I can make your classroom experience more accommodating. Once you have this letter, you are welcome to visit my office hours or email me to discuss ideas about how we can tailor the course accordingly. While you can request accommodations at any time, the sooner we start this conversation, the better. If you have concerns about the course that are not addressed through ODS, please contact me. At no point will I ask you to divulge details about your personal circumstances to me. </p>
+</div>
+</div>
+</div>
+<div class="panel panel-primary" id="policies-10">
+<div id="policies-10-heading" class="panel-heading" role="tab" data-toggle="collapse" data-target="#policies-10-collapse" data-parent="#policies" aria-expanded="true" aria-controls="policies-10-collapse" style="cursor: pointer;">
+<h4 class="panel-title">Student Well-being</h4>
+</div>
+<div id="policies-10-collapse" class="panel-collapse collapse" role="tabpanel" aria-labelledby="policies-10-heading">
+<div class="panel-body" style=""><p>College life is stressful, and life outside of college can be overwhelming. It is my position that attending to your physical and mental health and well-being should be a top priority. I will remind you of this often throughout the quarter. I encourage you to schedule a time to talk with me if you are struggling with this course. If you, or anyone you know, is experiencing distress, there are numerous campus resources that can provide support via the <a href="https://www.smith.edu/student-life/health-wellness">Schacht Center</a>. I can point you to these resources at any time throughout the quarter.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-primary" id="policies-11">
+<div id="policies-11-heading" class="panel-heading" role="tab" data-toggle="collapse" data-target="#policies-11-collapse" data-parent="#policies" aria-expanded="true" aria-controls="policies-11-collapse" style="cursor: pointer;">
+<h4 class="panel-title">Trigger Warnings</h4>
+</div>
+<div id="policies-11-collapse" class="panel-collapse collapse" role="tabpanel" aria-labelledby="policies-11-heading">
+<div class="panel-body" style=""><p>A trigger is a topic or image that can precipitate an intense emotional response. When common triggering topics are to be covered in this course, I will do my best to provide a trigger warning in advance of the discussion. However, I can&#39;t always anticipate triggers. With this in mind I&#39;ve set up an anonymous form, available on Moodle, where you can indicate topics for which you would like me to provide a warning.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="resources" class="section level2">
+<h2>Resources</h2>
+<div id="resources" class="panel-group" role="tablist" aria-multiselectable="true">
+<div class="panel panel-success" id="resources-0">
+<div id="resources-0-heading" class="panel-heading" role="tab" data-toggle="collapse" data-target="#resources-0-collapse" data-parent="#resources" aria-expanded="true" aria-controls="resources-0-collapse" style="cursor: pointer;">
+<h4 class="panel-title">Moodle</h4>
+</div>
+<div aria-labelledby="resources-0-heading" class="panel-collapse collapse in" id="resources-0-collapse" role="tabpanel">
+<div class="panel-body" style="">Grades, forms, and handouts will be available on the course Moodle.</div>
+</div>
+</div>
+<div class="panel panel-success" id="resources-1">
+<div id="resources-1-heading" class="panel-heading" role="tab" data-toggle="collapse" data-target="#resources-1-collapse" data-parent="#resources" aria-expanded="true" aria-controls="resources-1-collapse" style="cursor: pointer;">
+<h4 class="panel-title">Perusall</h4>
+</div>
+<div id="resources-1-collapse" class="panel-collapse collapse" role="tabpanel" aria-labelledby="resources-1-heading">
+<div class="panel-body" style="">Aside from the main course text, all course readings and recorded lectures will be available on Perusall. You can access Perusall via the reading assignments linked from our course Moodle page.</div>
+</div>
+</div>
+<div class="panel panel-success" id="resources-2">
+<div id="resources-2-heading" class="panel-heading" role="tab" data-toggle="collapse" data-target="#resources-2-collapse" data-parent="#resources" aria-expanded="true" aria-controls="resources-2-collapse" style="cursor: pointer;">
+<h4 class="panel-title">Slack</h4>
+</div>
+<div id="resources-2-collapse" class="panel-collapse collapse" role="tabpanel" aria-labelledby="resources-2-heading">
+<div class="panel-body" style=""><ul>
+<li><code>#general</code>: Course announcements (only I can post) </li>
+<li><code>#sds-237-discussions</code>: Share news articles and relevant opportunities</li>
+<li><code>#sds-237-questions</code>: Ask and answer questions about our course</li>
+<li><code>#sds-237-appreciation</code>: Acknowledge colleagues that have been helpful</li>
+<li>You can also create private Slack channels with your project group members. </li>
+</ul>
+
+<p>Contributing regularly to Slack is one way to demonstrate engagement. </p>
+</div>
+</div>
+</div>
+<div class="panel panel-success" id="resources-3">
+<div id="resources-3-heading" class="panel-heading" role="tab" data-toggle="collapse" data-target="#resources-3-collapse" data-parent="#resources" aria-expanded="true" aria-controls="resources-3-collapse" style="cursor: pointer;">
+<h4 class="panel-title">GitHub and GitHub Classroom</h4>
+</div>
+<div id="resources-3-collapse" class="panel-collapse collapse" role="tabpanel" aria-labelledby="resources-3-heading">
+<div class="panel-body" style="">I will be using GitHub Classroom to distribute several course assignments, and you will submit assignments by pushing changes to template documents to a private GitHub repository. Early checkpoints towards the final project will help you navigate how we will use GitHub in this course. </div>
+</div>
+</div>
+<div class="panel panel-success" id="resources-4">
+<div id="resources-4-heading" class="panel-heading" role="tab" data-toggle="collapse" data-target="#resources-4-collapse" data-parent="#resources" aria-expanded="true" aria-controls="resources-4-collapse" style="cursor: pointer;">
+<h4 class="panel-title">RStudio</h4>
+</div>
+<div id="resources-4-collapse" class="panel-collapse collapse" role="tabpanel" aria-labelledby="resources-4-heading">
+<div class="panel-body" style="">Most assignments for this course will be drafted in RMarkdown. Early checkpoints towards the final project will help you install RStudio, connect it to GitHub, and learn how to write in R Markdown.</div>
+</div>
+</div>
+<div class="panel panel-success" id="resources-5">
+<div id="resources-5-heading" class="panel-heading" role="tab" data-toggle="collapse" data-target="#resources-5-collapse" data-parent="#resources" aria-expanded="true" aria-controls="resources-5-collapse" style="cursor: pointer;">
+<h4 class="panel-title">Jacobson Center</h4>
+</div>
+<div id="resources-5-collapse" class="panel-collapse collapse" role="tabpanel" aria-labelledby="resources-5-heading">
+<div class="panel-body" style=""><p>Smith&#39;s <a href="https://www.smith.edu/academics/jacobson-center">Jacobson Center</a> asserts that <em>all</em> students can improve their communication and learning skills. I encourage all students to take advantage of their writing support services, workshops, and tutors. </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = false;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

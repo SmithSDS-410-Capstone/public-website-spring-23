@@ -1,0 +1,99 @@
+---
+title: "Day Nineteen: Mobilization"
+subtitle: "SDS 237: Data Ethnography"
+author: |
+  Lindsay Poirier<br/>
+  <span style = 'font-size: 70%;'>
+  [Statistical & Data Sciences](http://www.smith.edu/sds), Smith College<br/>
+  </span>
+date: |
+  Spring 2022<br/>
+  `r sds::img_logo(width = 64)`
+output:
+  sds::moon_reader:
+    lib_dir: libs
+    css: xaringan-custom.css
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+```
+
+```{r xaringan-themer, include=FALSE}
+# sds::duo_smith()
+sds::mono_light_smith()
+```
+
+# Announcements
+
+* Office hours will be **virtual** today. 
+* We will spend some time talking about mini-project revisions on Wednesday. 
+* I will be offline Thursday evening to Tuesday morning. Office hours will be cancelled next week. 
+
+---
+
+# What is evidence?
+
+* Etymologically dual meaning:
+  * Transparent, obvious, clear, speaking for itself
+  * Appearance or indication, requiring interpretation
+  
+> Biruk, Cal. 2018. Cooking Data: Culture and Politics in an African Research World. Illustrated edition. Durham: Duke University Press Books.
+
+---
+
+class: center, middle
+# How does evidence get talked about in the media, politics, and society?
+
+---
+
+class: center, middle
+# How do words get their meanings? How did the word 'she' acquire meaning? What are some examples of words that have undergone social change in the last five years? How might we map the cultural shifts and social institutions shaping language?
+
+---
+
+class: center, middle
+# On Nov  8, 2022 at 11PM Northampton’s reported AQI was 95.
+
+---
+
+class: center, middle
+# "27 percent of the French population smoke a cigarette every day."
+
+---
+
+class: center, middle
+# How do numbers acquire meaning? Through what means do we determine their significance?
+
+---
+
+# Framing Statistics
+
+* Comparison/Ranking
+  * Is x more/less than y?
+* Standards-Setting/Benchmarking
+  * Does x meet z standard/benchmark?
+* Appealing to Emotion/Lived Experience
+  * How does x make me feel/relate to my life?
+
+---
+
+# Mobilizing Data
+
+* Strategizing and engaging in the circulation of data
+* Meaning-making involves socio-cultural work
+* Data can have "interpretive flexibility"
+  * Different social groups assign different meaning to data. 
+  * Example: "I ran 20 minutes this morning."
+
+---
+
+class: center, middle
+# "The actual number of Americans jailed or imprisoned, about 2.3 million." - Matt Korostoff
+
+> [https://mkorostoff.github.io/incarceration-in-real-numbers/](https://mkorostoff.github.io/incarceration-in-real-numbers/)
+
