@@ -15,7 +15,7 @@ library(htmltools)
 ```
 
 ::: float_image_right
-```{r, out.width = "200px", fig.cap='Course logo designed by Zoe Scheffler, Fall \'21'}
+```{r, out.width = "200px"}
 knitr::include_graphics("img/sds410-logo.png")
 ```
 
