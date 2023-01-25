@@ -5,21 +5,19 @@ project:
 website:
   navbar:
     background: primary
-    title: "SDS 237: Data Ethnography"
+    title: "SDS 410: SDS Capstone"
     right:
       - text: "Syllabus"
         href: index.html
-      - text: "Standards Grading"
+      - text: "Self-Assessment"
         href: grading_contract.html
-      - text: "Learning Dimensions"
-        href: learning_dimensions.html        
       - text: "Schedule"
         href: schedule.html
 
 format:
   html:
     theme: flatly
-    css: "css/styles.css"
+    css: "css/custom.css"
     toc: true
     toc_float:
       collapsed: true

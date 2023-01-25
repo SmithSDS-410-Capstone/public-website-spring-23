@@ -25,7 +25,8 @@ BibOptions(check.entries = FALSE,
            no.print.fields = "issn")
 topics <- read.csv("data/topics.csv") %>%
   mutate(date = mdy(date)) %>%
-  arrange(date)
+  arrange(date) %>%
+  mutate(standard_id = as.character(standard_id))
 standards <- read.csv("data/standards.csv") %>%
   mutate(standard_id = as.character(standard_id))
 topics[topics == ""] <- NA
@@ -94,8 +95,8 @@ for (i in 1:nrow(topics)){
   cat(paste("## ", date_format(ymd(todays_topic$date[1]))))
   cat("\n")
   cat(paste("### ", todays_topic$topic[1]))
-  cat("\n")
-  print_this_week_standards_buttons(todays_topic$topic_abbr[1])
+  #cat("\n")
+  #print_this_week_standards_buttons(todays_topic$topic_abbr[1])
   cat("\n")
   cat("\n")
   cat("::: {.panel-tabset}")
