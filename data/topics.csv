@@ -1,6 +1,6 @@
 ﻿topic_id,topic_abbr,topic,date,standard_id,required_reading,req_chapter,optional_reading,opt_chapter,writing_assignment,project_assignment,slides,link,code
 1,introductions,Project Faire,1/26/23,1,,,,,,,,,
-2,github,GitHub,1/31/23,1,,,,,,GitHub Set-up;Resume;Project Rankings;Project Proposals,,,
+2,github,GitHub,1/31/23,1,,,,,,GitHub Set-up;Resume;Project Rankings;Project Proposals,,[GitHub Workshop Instructions](github.html),
 3,professionalism,Working with Sponsors,2/2/23,1,,,,,,,,,
 4,collaboration,Collaboration,2/7/23,1,,,,,,Introduction Email to Client; Agenda Templates,,,
 5,scoping,Problem Statements and Project Scoping,2/9/23,1,chunDiscriminatingDataCorrelation2021a,Chapter 1,,,,,,,

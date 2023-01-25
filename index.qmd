@@ -14,6 +14,13 @@ library(bsplus)
 library(htmltools)
 ```
 
+::: float_image_right
+```{r, out.width = "200px", fig.cap='Course logo designed by Zoe Scheffler, Fall \'21'}
+knitr::include_graphics("img/sds410-logo.png")
+```
+
+:::
+
 This one-semester course leverages students’ previous coursework to address a real-world data analysis problem. Students collaborate in teams on projects sponsored by academia, government, and/or industry. Professional skills developed include: ethics, project management, collaborative software development, documentation, and consulting. Regular team meetings, weekly progress reports, interim and final reports, and multiple presentations are required. Open only to Statistical and Data Science majors.
 
 Classes will be held on Tuesdays and Thursdays from 1:20 PM to 2:35 PM. 
