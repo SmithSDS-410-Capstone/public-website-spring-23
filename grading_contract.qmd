@@ -103,7 +103,7 @@ Your sponsored project will ultimately include a GitHub repository of code deliv
 
 ### Readings
 
-Every two weeks, you will be expected to come to class having completed course readings. Every project team will be assigned to develop a [discussion plan](reading-discusions.html) for one assigned reading and to lead one reading discussion. At a minimum, you must contribute to a discussion plan and help lead a reading discussion to pass the course.  
+Every two weeks, you will be expected to come to class having completed course readings. Every project team will be assigned to develop a [discussion plan](reading-discussions.html) for one assigned reading and to lead one reading discussion. At a minimum, you must contribute to a discussion plan and help lead a reading discussion to pass the course.  
 
 ### Self-Assessments
 
