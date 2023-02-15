@@ -60,28 +60,28 @@
     "href": "schedule.html#february-09-2023",
     "title": "Schedule",
     "section": "February 09, 2023",
-    "text": "February 09, 2023\n\nProblem Statements and Project Scoping\n\nDue TodayFurther Resources\n\n\n Chapter 1 , Chun, Wendy Hui Kyong (2021). Discriminating Data: Correlation, Neighborhoods, and the New Politics of Recognition. Cambridge, Massachusetts: The MIT Press. ISBN: 978-0-262-04622-0."
+    "text": "February 09, 2023\n\nProblem Statements and Project Scoping\n\nDue TodayFurther Resources\n\n\n Chapter 1 (DDP) , Chun, Wendy Hui Kyong (2021). Discriminating Data: Correlation, Neighborhoods, and the New Politics of Recognition. Cambridge, Massachusetts: The MIT Press. ISBN: 978-0-262-04622-0."
   },
   {
     "objectID": "schedule.html#february-14-2023",
     "href": "schedule.html#february-14-2023",
     "title": "Schedule",
     "section": "February 14, 2023",
-    "text": "February 14, 2023\n\nSCRUM Models & Code Styling\n\nDue TodayFurther Resources\n\n\n Collaboration Protocols\n Problem Statement, Scope, and Plan"
+    "text": "February 14, 2023\n\nSCRUM Models\n\nDue TodayFurther Resources\n\n\n Collaboration Protocols\n Problem Statement, Scope, and Plan"
   },
   {
     "objectID": "schedule.html#february-16-2023",
     "href": "schedule.html#february-16-2023",
     "title": "Schedule",
     "section": "February 16, 2023",
-    "text": "February 16, 2023\n\nProblem Contexts\n\nDue TodayFurther Resources"
+    "text": "February 16, 2023\n\nCode Styling\n\nDue TodayFurther Resources\n\n\n\n\n\n Code Style Guides"
   },
   {
     "objectID": "schedule.html#february-21-2023",
     "href": "schedule.html#february-21-2023",
     "title": "Schedule",
     "section": "February 21, 2023",
-    "text": "February 21, 2023\n\nProject Management Tools and Tasking\n\nDue TodayFurther Resources\n\n\n Chapter 2 , Chun, Wendy Hui Kyong (2021). Discriminating Data: Correlation, Neighborhoods, and the New Politics of Recognition. Cambridge, Massachusetts: The MIT Press. ISBN: 978-0-262-04622-0.\n Client Description, Data Description, and Environmental Analysis"
+    "text": "February 21, 2023\n\nProject Management Tools and Tasking\n\nDue TodayFurther Resources\n\n\n Chapter 2 (NIEER) , Chun, Wendy Hui Kyong (2021). Discriminating Data: Correlation, Neighborhoods, and the New Politics of Recognition. Cambridge, Massachusetts: The MIT Press. ISBN: 978-0-262-04622-0.\n Client Description and Data Description"
   },
   {
     "objectID": "schedule.html#february-23-2023",
@@ -130,7 +130,7 @@
     "href": "schedule.html#march-23-2023",
     "title": "Schedule",
     "section": "March 23, 2023",
-    "text": "March 23, 2023\n\nDocumentation\n\nDue TodayFurther Resources\n\n\n Chapter 4 , Chun, Wendy Hui Kyong (2021). Discriminating Data: Correlation, Neighborhoods, and the New Politics of Recognition. Cambridge, Massachusetts: The MIT Press. ISBN: 978-0-262-04622-0.\n Mid-term Assessment"
+    "text": "March 23, 2023\n\nDocumentation\n\nDue TodayFurther Resources\n\n\n Chapter 4 (Candlewood) , Chun, Wendy Hui Kyong (2021). Discriminating Data: Correlation, Neighborhoods, and the New Politics of Recognition. Cambridge, Massachusetts: The MIT Press. ISBN: 978-0-262-04622-0.\n Mid-term Assessment"
   },
   {
     "objectID": "schedule.html#march-28-2023",
@@ -250,5 +250,12 @@
     "title": "Reading Discussions",
     "section": "",
     "text": "Ahead of class, the assigned team should develop 4-5 discussion questions (one per team member) related to the chapter’s arguments for discussion during class. Questions may:\n\nReflect on the chapter’s main arguments\nClarify or unpack a concept developed in the chapter\nConnect the chapter’s arguments to current events\nPrompt us to think about how the arguments impact our work/lives\n\nEach team member will be responsible for facilitating small group discussions on one of the questions the team developed. In class, we will split into 4-5 groups for 10-minute small group discussions - one group per question. Then we will switch up the groups and repeat this process again.\nThen we will come back together for the last 20 minutes; each team member will briefly report on what was discussed in the two small group discussions they facilitated, and finally we will open the room for class discussion (led by me or Swaha)."
+  },
+  {
+    "objectID": "style-guides.html",
+    "href": "style-guides.html",
+    "title": "Style Guides",
+    "section": "",
+    "text": "When working on collaborative code projects, it can be helpful to come to some agreements ahead of time regarding how to compose code and how to make changes to code repositories. Today, we are going to think through some of these issues by generating a code style guide.\n\n\nStandard formatting conventions are important for organizing, managing, and sharing code. Conventions ensure that: \n\nIf you were to step away from the project and come back to it in 5 years, you would be able to understand and navigate the code quickly. \nIf you were to share the repository with another developer, the developer would be able to understand and navigate the code quickly.\n\nHere are some questions that you should consider as you draft this section of your style guide:\n\nWhat standards will you use for naming files? (e.g. underscores, dashes, etc.) How will you ensure that file names are easily differentiated by all team members?\nHow will files be organized into folders in your repo? What will the main folders be?\nWhat standards will you use for formatting object names in your code? (e.g. underscores, dashes, etc.) How will you ensure that object names are easily differentiated by all team members?\nHow will you comment code? Where should comments be placed in code? What will their purpose be? Do you expect full sentences?\nWhat are the expectations for white space in your code? Will you include spaces between each symbol/punctuation mark? What about parentheses?\nWhen will line breaks be added to the code?\nWhat standards will you use for code indentation?\n\n\n\n\nDeveloping standard processes for code writing and review will help ensure that team members are not overwriting each other’s work, that code is consistently being reviewed before inclusion in the repo, and that generally everyone understands their roles in the repo’s maintenance. It will also reduce merge conflicts. Here are some things to consider when drafting this portion of your style guide:\n\nWill code always be written in separate branches? How will branches be named?\nHow will collaborators work across files? What mechanisms will you put into place to mitigate merge conflicts when collaborators are working on the same files?\nShould there be a GitHub Issue associated with each pull request?\nHow often do you expect team members to commit their code? (e.g. after each substantive change; after changes to x lines of code)\nWhat standards will you put in place for commit messages? What do you expect to see in a commit message?\nWhen/how often will pull requests be issued?\nWhen will you have team members review code? How will you designate that code needs to be reviewed?\nAfter a review, if changes need to be made, what will the code editing process look like?\nWho will be responsible for merging code?"
   }
 ]

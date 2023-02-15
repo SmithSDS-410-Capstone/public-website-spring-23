@@ -1,0 +1,50 @@
+---
+title: "Style Guides"
+author: "Lindsay Poirier"
+format: html
+editor: visual
+---
+
+## Introduction
+
+When working on collaborative code projects, it can be helpful to come to some agreements ahead of time regarding how to compose code and how to make changes to code repositories. Today, we are going to think through some of these issues by generating a code style guide.
+
+### Formatting and Naming
+
+Standard formatting conventions are important for organizing, managing, and sharing code. Conventions ensure that: 
+
+-   If you were to step away from the project and come back to it in 5 years, you would be able to understand and navigate the code quickly. 
+
+-   If you were to share the repository with another developer, the developer would be able to understand and navigate the code quickly.
+
+Here are some questions that you should consider as you draft this section of your style guide:
+
+1.  What standards will you use for naming files? (e.g. underscores, dashes, etc.) How will you ensure that file names are easily differentiated by all team members?
+2.  How will files be organized into folders in your repo? What will the main folders be?
+3.  What standards will you use for formatting object names in your code? (e.g. underscores, dashes, etc.) How will you ensure that object names are easily differentiated by all team members?
+4.  How will you comment code? Where should comments be placed in code? What will their purpose be? Do you expect full sentences?
+5.  What are the expectations for white space in your code? Will you include spaces between each symbol/punctuation mark? What about parentheses?
+6.  When will line breaks be added to the code?
+7.  What [standards](https://en.wikipedia.org/wiki/Indentation_style) will you use for code indentation?
+
+### Code Writing and Review
+
+Developing standard processes for code writing and review will help ensure that team members are not overwriting each other's work, that code is consistently being reviewed before inclusion in the repo, and that generally everyone understands their roles in the repo's maintenance. It will also reduce merge conflicts. Here are some things to consider when drafting this portion of your style guide:
+
+1.  Will code always be written in separate branches? How will branches be named?
+
+2.  How will collaborators work across files? What mechanisms will you put into place to mitigate merge conflicts when collaborators are working on the same files?
+
+3.  Should there be a GitHub Issue associated with each pull request?
+
+4.  How often do you expect team members to commit their code? (e.g. after each substantive change; after changes to x lines of code)
+
+5.  What standards will you put in place for commit messages? What do you expect to see in a commit message?
+
+6.  When/how often will pull requests be issued?
+
+7.  When will you have team members review code? How will you designate that code needs to be reviewed?
+
+8.  After a review, if changes need to be made, what will the code editing process look like?
+
+9.  Who will be responsible for merging code?
