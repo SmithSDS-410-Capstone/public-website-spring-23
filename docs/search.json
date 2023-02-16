@@ -74,7 +74,7 @@
     "href": "schedule.html#february-16-2023",
     "title": "Schedule",
     "section": "February 16, 2023",
-    "text": "February 16, 2023\n\nCode Styling\n\nDue TodayFurther Resources\n\n\n\n\n\n Code Style Guides"
+    "text": "February 16, 2023\n\nCode Styling\n\nDue TodayFurther Resources\n\n\n\n\n\n Code Style Guides\n GitHub Exercise(github-exercise.html)"
   },
   {
     "objectID": "schedule.html#february-21-2023",
@@ -278,5 +278,26 @@
     "title": "Final Report Prompts",
     "section": "Data Description",
     "text": "Data Description\nIn a .qmd file, submit 300-500 words, introducing the data resources that you will be working with to a lay audience. Some teams might not yet know all of these data sources, so you need only detail the ones that you know you will be working with.\nI have found in the past that detailing datasets to an audience unfamiliar with that data is really challenging. We have a tendency to want to describe the data’s technical details rather than summarizing more generally what the data represents. I’ve included an example below to help you think through how to approach this. At the very least this section should include:\n\nWhat the data represents\nWho produced it\nIts observational unit\nSome variables that describe that observational unit (but be careful about getting too technical here)\nA bit of its history/context\nA few data limitations\n\n\nTo address this problem, we analyzed a dataset put out by the US EPA [<– who produced it] that documents the environmental compliance and enforcement history of every EPA-regulated facility in the US, including prisons [<– what it represents]. For every EPA-regulated facility in the US in a given year [<– observational unit], the dataset reports information such as the permits the facility has been awarded, enforcement actions taken against the facility, and penalties it has assessed [<– variables]. The EPA has been integrating this data from a number of different compliance databases for major federal regulations (such as the Clean Air Act and the Safe Drinking Water Act) for over ten years [<– history/context]. The data tends to be more comprehensive for larger facilities than for smaller facilities and does not include information about compliance with all environmental laws [<–limitations]."
+  },
+  {
+    "objectID": "github-exercise.html",
+    "href": "github-exercise.html",
+    "title": "GitHub Project Management",
+    "section": "",
+    "text": "In this exercise, you will work through solving merge conflicts. To do this:\n\nOpen your group repository on your local computer\nSwap your name with someone else’s in problem-definitions.qmd, without discussing it with your teammates\nCommit and push your changes\nFix the merge conflicts by working with your team members"
+  },
+  {
+    "objectID": "github-exercise.html#exercise-2-merge-conflicts-across-branches",
+    "href": "github-exercise.html#exercise-2-merge-conflicts-across-branches",
+    "title": "GitHub Project Management",
+    "section": "Exercise 2: Merge Conflicts across Branches",
+    "text": "Exercise 2: Merge Conflicts across Branches\n\nReview recommended style guide headings at this link. Assign a section of the style-guide document to each member of your team.\nEach of you will then create your own branch.\nEach of you will add a section or a question related to the style guide on line 12 in the style-guide.qmd document in your respective branch.\nCommit and push your changes.\nCreate a pull request to merge back into main. Collaborate with your team to address any merge conflicts, as you merge all changes.\nDelete your branches after all your changes have been merged."
+  },
+  {
+    "objectID": "github-exercise.html#exercise-3-formatting-messy-r-code",
+    "href": "github-exercise.html#exercise-3-formatting-messy-r-code",
+    "title": "GitHub Project Management",
+    "section": "Exercise 3: Formatting Messy R code",
+    "text": "Exercise 3: Formatting Messy R code\nIn this exercise, you will work on formatting the given R code according to some agreed upon style conventions.\n\nOne team member will create an R script in the collaboration-docs folder in your group project repository and copy the following R code onto it. Commit and push your changes.\n\n\n# loading libraries\nlibrary(tidyverse)\nlibrary(nycflights13) \n\n# Copy paste this code into the console if you don't have the nycflights13 package\n# install.packages(\"nycflights13\")\n\nMystery_dest <- flights %>% select(carrier, dest, origin) %>% group_by(dest) %>%\n  summarise(`Number of flights` = n()) %>% full_join(airports, by = c(\"dest\" = \"faa\")) %>% select(dest, name, `Number of flights`)\n\nmysteryPlanes = flights |> select(flight,carrier,dest,origin) |>\n  \n  # grouping by destination to get the number of mystery planes by summarizing and joining to the airports data on the dest and faa variables\n  \ngroup_by(dest) |>\n  summarise(Number=n()) |> \n  full_join(airports, by = c(\"dest\"=\"faa\")) |> select(dest,name,Number)\n\nMystery_dest %>% \n  arrange(desc(`Number of flights`)) %>% \n  head(10) |> \n  ggplot() +\n  geom_col(\n    aes(x = dest, y = `Number of flights`), \n    fill = \"cornflowerblue\"\n    ) +\n  theme_linedraw()\n\n\n\n# Uncomment the code below to save the mysteryPlanes data as a csv to your repository\n# write.csv(mysteryPlanes, \"Path to export the DataFrame\\\\File Name.csv\", row.names=FALSE)\n\n\nAll other members of the team will pull the changes onto their local system.\nEach of you will then create your own branch.\nDivide the code among yourselves so that each of you works on a different part of the code.\nDiscuss some stylistic standards that your team will follow. Eventually, these will be listed in your style guide.\nEach of you will format your part of the code according to the standards you’ve agreed upon.\nCommit and push your changes.\nCreate a pull request to merge your changes back into main. Don’t merge the changes yet."
   }
 ]
