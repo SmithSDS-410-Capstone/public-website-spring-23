@@ -1,0 +1,42 @@
+---
+title: "Mid-Term Presentations"
+author: "Lindsay Poirier"
+format: html
+editor: visual
+---
+
+## Introduction
+
+Presenting on project progress is a key component to almost any job. With this in mind, you will be delivering two presentations this semester - one mid-semester and one at the end of the semester. These two presentations have distinct goals. The final presentation will focus predominantly on the results of your work. On the other hand, this presentation will focus predominantly on the aims of your work, your project plan, and the methods you will engage to achieve your aims.
+
+Please note that this presentation will be video-recorded. After spring break, I will meet with each of the teams one-on-one to review the recordings and talk about strategies for improving presentation styles.
+
+### Format
+
+You should prepare a slide deck to present in class. All members of your team will be expected to contribute to the delivery of your presentation. To ensure seamless transitions, I encourage you to practice "handing off" sections of the presentation.
+
+### Length
+
+Your mid-term presentation should be about 10 minutes long (8 minutes minimum; 10 minutes maximum). This will allow 10 minutes for question and answer, feedback, and collaborative brainstorming following each presentation. *Please rehearse ahead of time to ensure that you can meet this time benchmark.*
+
+### Content
+
+The main goal of this presentation is to introduce the class to the primary goals of your project and the plan you've developed to achieve those goals. The presentation should include:
+
+-   an introduction to your client
+
+-   an introduction to the data/systems you will be working with
+
+-   the scope of your deliverables
+
+-   an outline of the sprints that will bring you to completion
+
+-   your progress so far
+
+-   any challenges that you are currently facing
+
+Be sure that your presentation opens with an introduction that highlights what you will discuss and closes with a conclusion that summarizes what you discussed.
+
+### Audience
+
+The audience for this presentation will be senior SDS students. So you can assume general knowledge of data science and statistics, but you shouldn't assume the audience knows the ins and outs of the capstone course or project management concepts that we've talked about so far.

@@ -10,7 +10,7 @@ topic_id,topic_abbr,topic,date,standard_id,required_reading,req_chapter,optional
 9,rally,Rally Day,2/23/23,1,,,,,,,,,
 10,retrospective,Retrospective 1,2/28/23,1,,,,,,[Code Style Guide](style-guides.html),,,
 11,work1,Working Day,3/2/23,1,chunDiscriminatingDataCorrelation2021a,Chapter 3 (Birkbeck),,,,,,,
-12,mid1,Mid-Term Presentations,3/7/23,1,,,,,,,,,
+12,mid1,Mid-Term Presentations,3/7/23,1,,,,,[Midterm Presentation](midterm.hmtl),,,,
 13,mid2,Mid-Term Presentations,3/9/23,1,,,,,,1-page Summary of Project Progress,,,
 14,codereview,Code Review,3/21/23,1,,,,,,,,,
 15,documentation,Documentation,3/23/23,1,chunDiscriminatingDataCorrelation2021a,Chapter 4 (Candlewood),,,Mid-term Assessment,,,,
