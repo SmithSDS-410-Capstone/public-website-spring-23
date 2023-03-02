@@ -1,0 +1,55 @@
+---
+title: "GitHub Project Management Set-up"
+format: html
+editor: visual
+---
+
+## Creating Projects
+
+To create a GitHub Project:
+
+1.  Go to the `Projects` tab in your repository.
+
+2.  Click on the `Link a Project` button to either create a new project, or link an existing GitHub Project.
+
+3.  Once you create a project, you will be asked to choose one of three views -- Table, Board, or Roadmap. This will be the first `View` of your Project.
+
+4.  You can also create a new view by clicking the `New View` button. You will again be able to choose one of the three views for your project. Once you do so, click `Save Changes` to create this new View.
+
+You can find out more about GitHub Projects [here](https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/quickstart-for-projects).
+
+[GitHub Issues](https://docs.github.com/en/issues/tracking-your-work-with-issues/about-issues) helps track ideas, tasks, or bugs on GitHub in an organized manner. To indicate that work is in progress, you can link an issue to a pull request.
+
+## Adding Sprints to Projects
+
+1.  Open your project, and click the `...` in the upper right hand corner.
+
+2. Click `Settings`.
+
+3. In the left sidebar, click `+ New Field`. Set the field name to "Sprint" and the type to Iteration. Set the start date to February 1 and the duration to 4 weeks. 
+
+4. In the screen that appears, adjust the date of the sprints to match our sprint dates. Click `Save Changes`.
+
+5. On your project board, you can now add a column for Sprints or create a new board filtered to each Sprint. 
+
+## Creating Issues
+
+To create an Issue in GitHub :
+
+1.  Go to the `Issues` tab in your repository.
+
+2.  Click on the `New Issue` button.
+
+3.  Add a brief title, and any necessary description.
+
+    i.  To link the issue to a project (like the Kanban boards you created in class), click on on the `Projects` button on the right-hand side tab. You should be able to see all your projects and choose the one you want to link it to. This will automatically add your issue to your project. You can also select a status and a sprint for this issue when you do this.
+
+    ii. To link a branch or an existing pull request, click on the `Development` button on the right-hand side tab. This will help keep your work organized.
+
+    iii. You can also add upto 10 assignees to the Issue using the `Assignees` button.
+
+4.  Click on the `Submit New Issue` button to create the Issue.
+
+
+
+

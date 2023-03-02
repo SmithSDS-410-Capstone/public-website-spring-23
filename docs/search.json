@@ -81,7 +81,7 @@
     "href": "schedule.html#february-21-2023",
     "title": "Schedule",
     "section": "February 21, 2023",
-    "text": "February 21, 2023\n\nProject Management Tools and Tasking\n\nDue TodayFurther Resources\n\n\n Chapter 2 (NIEER) , Chun, Wendy Hui Kyong (2021). Discriminating Data: Correlation, Neighborhoods, and the New Politics of Recognition. Cambridge, Massachusetts: The MIT Press. ISBN: 978-0-262-04622-0.\n Client Description and Data Description"
+    "text": "February 21, 2023\n\nProject Management Tools and Tasking\n\nDue TodayFurther Resources\n\n\n Chapter 2 (NIEER) , Chun, Wendy Hui Kyong (2021). Discriminating Data: Correlation, Neighborhoods, and the New Politics of Recognition. Cambridge, Massachusetts: The MIT Press. ISBN: 978-0-262-04622-0.\n Client Description and Data Description\n\n\n GitHub Project Management Set-up"
   },
   {
     "objectID": "schedule.html#february-23-2023",
@@ -306,5 +306,26 @@
     "title": "Mid-Term Presentations",
     "section": "",
     "text": "Presenting on project progress is a key component to almost any job. With this in mind, you will be delivering two presentations this semester - one mid-semester and one at the end of the semester. These two presentations have distinct goals. The final presentation will focus predominantly on the results of your work. On the other hand, this presentation will focus predominantly on the aims of your work, your project plan, and the methods you will engage to achieve your aims.\nPlease note that this presentation will be video-recorded. After the presentation, you will get a copy of the video-recording to review on your own, along with a list of prompts to consider/take notes on as you are reviewing it. After spring break, I will meet with each of the teams one-on-one to review your notes and talk about strategies for improving individual presentation styles. I can imagine that this aspect of the assignment might feel a little awkward (in fact, this was part of my own capstone in college, so I have some experience with that feeling!). …but in the past, I’ve found that having the opportunity to re-watch yourself present and a space to reflect on it can be really transformative in noticing things about our respective presentation styles. We will work together to create a supportive space for reflection.\n\n\nYou should prepare a slide deck to present in class. All members of your team will be expected to contribute to the delivery of your presentation. To ensure seamless transitions, I encourage you to practice “handing off” sections of the presentation.\n\n\n\nYour mid-term presentation should be about 10 minutes long (8 minutes minimum; 10 minutes maximum). This will allow 10 minutes for question and answer, feedback, and collaborative brainstorming following each presentation. Please rehearse ahead of time to ensure that you can meet this time benchmark.\n\n\n\nThe main goal of this presentation is to introduce the class to the primary goals of your project and the plan you’ve developed to achieve those goals. The presentation should include:\n\nan introduction to your client\nan introduction to the data/systems you will be working with\nthe scope of your deliverables\nan outline of the sprints that will bring you to completion\nyour progress so far\nany challenges that you are currently facing\n\nBe sure that your presentation opens with an introduction that highlights what you will discuss and closes with a conclusion that summarizes what you discussed.\n\n\n\nThe audience for this presentation will be senior SDS students. So you can assume general knowledge of data science and statistics, but you shouldn’t assume the audience knows the ins and outs of the capstone course or project management concepts that we’ve talked about so far."
+  },
+  {
+    "objectID": "github-instructions.html",
+    "href": "github-instructions.html",
+    "title": "GitHub Project Management Set-up",
+    "section": "",
+    "text": "To create a GitHub Project:\n\nGo to the Projects tab in your repository.\nClick on the Link a Project button to either create a new project, or link an existing GitHub Project.\nOnce you create a project, you will be asked to choose one of three views – Table, Board, or Roadmap. This will be the first View of your Project.\nYou can also create a new view by clicking the New View button. You will again be able to choose one of the three views for your project. Once you do so, click Save Changes to create this new View.\n\nYou can find out more about GitHub Projects here.\nGitHub Issues helps track ideas, tasks, or bugs on GitHub in an organized manner. To indicate that work is in progress, you can link an issue to a pull request."
+  },
+  {
+    "objectID": "github-instructions.html#adding-sprints-to-projects",
+    "href": "github-instructions.html#adding-sprints-to-projects",
+    "title": "GitHub Project Management Set-up",
+    "section": "Adding Sprints to Projects",
+    "text": "Adding Sprints to Projects\n\nOpen your project, and click the ... in the upper right hand corner.\nClick Settings.\nIn the left sidebar, click + New Field. Set the field name to “Sprint” and the type to Iteration. Set the start date to February 1 and the duration to 4 weeks.\nIn the screen that appears, adjust the date of the sprints to match our sprint dates. Click Save Changes.\nOn your project board, you can now add a column for Sprints or create a new board filtered to each Sprint."
+  },
+  {
+    "objectID": "github-instructions.html#creating-issues",
+    "href": "github-instructions.html#creating-issues",
+    "title": "GitHub Project Management Set-up",
+    "section": "Creating Issues",
+    "text": "Creating Issues\nTo create an Issue in GitHub :\n\nGo to the Issues tab in your repository.\nClick on the New Issue button.\nAdd a brief title, and any necessary description.\n\nTo link the issue to a project (like the Kanban boards you created in class), click on on the Projects button on the right-hand side tab. You should be able to see all your projects and choose the one you want to link it to. This will automatically add your issue to your project. You can also select a status and a sprint for this issue when you do this.\nTo link a branch or an existing pull request, click on the Development button on the right-hand side tab. This will help keep your work organized.\nYou can also add upto 10 assignees to the Issue using the Assignees button.\n\nClick on the Submit New Issue button to create the Issue."
   }
 ]
