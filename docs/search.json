@@ -179,7 +179,7 @@
     "href": "schedule.html#april-18-2023",
     "title": "Schedule",
     "section": "April 18, 2023",
-    "text": "April 18, 2023\n\nTransition Planning\n\nDue TodayFurther Resources\n\n\n Draft Final Report\n\n\n Today we will discuss how to “hand-off” your final projects to your sponsors. What information will they need to use and adapt your deliverables?"
+    "text": "April 18, 2023\n\nTransition Planning\n\nDue TodayFurther Resources\n\n\n Draft Final Report\n\n\n Today we will spend the first 40 minutes of class discussing how to “hand-off” your final projects to your sponsors. What information will they need to use and adapt your deliverables? Then you will have time to work with your teams on the final project. Lindsay and Swaha will do a round of “stand-ups”."
   },
   {
     "objectID": "schedule.html#april-20-2023",
@@ -327,5 +327,12 @@
     "title": "GitHub Project Management Set-up",
     "section": "Creating Issues",
     "text": "Creating Issues\nTo create an Issue in GitHub :\n\nGo to the Issues tab in your repository.\nClick on the New Issue button.\nAdd a brief title, and any necessary description.\n\nTo link the issue to a project (like the Kanban boards you created in class), click on on the Projects button on the right-hand side tab. You should be able to see all your projects and choose the one you want to link it to. This will automatically add your issue to your project. You can also select a status and a sprint for this issue when you do this.\nTo link a branch or an existing pull request, click on the Development button on the right-hand side tab. This will help keep your work organized.\nYou can also add upto 10 assignees to the Issue using the Assignees button.\n\nClick on the Submit New Issue button to create the Issue."
+  },
+  {
+    "objectID": "mid-semester-assessment.html",
+    "href": "mid-semester-assessment.html",
+    "title": "Mid-Semester Assessment",
+    "section": "",
+    "text": "Following Spring Break, you should submit a 700-800-word mid-semester assessment of your work, grading yourself along each of the course’s seven dimensions. For each dimension, you will develop an argument for why you should receive a particular grade (A, B, C, D, etc), drawing evidence from your log to support your argument. Your assessment should conclude by reflecting on areas for improvement in the second half of the semester.\nYou should submit this assignment to your Github portfolio repository as a .qmd in the reflections folder. Please be sure to have separate headings for each of the course’s dimensions, and to clearly list the grade you would give yourself for each.\nI want you to think of this assignment as an opportunity to generate material that you might reference when preparing job or graduate school materials. In cover letters and interviews, you may be expected to recall and detail specific instances where you demonstrated professionalism, where you learned to manage conflict in a collaboration, or where you overcame a challenge in project management. I’m asking you to provide specific examples in support of a grade, not only as proof of why you deserve that grade, but also because it will give you practice in effective self-advocating."
   }
 ]

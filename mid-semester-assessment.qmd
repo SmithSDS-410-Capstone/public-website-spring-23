@@ -1,0 +1,14 @@
+---
+title: "Mid-Semester Assessment"
+author: "Lindsay Poirier"
+format: html
+editor: visual
+---
+
+## Mid-Semester Assessment
+
+Following Spring Break, you should submit a 700-800-word mid-semester assessment of your work, grading yourself along each of the course's [seven dimensions](grading-contract.html). For each dimension, you will develop an argument for why you should receive a particular grade (A, B, C, D, etc), drawing evidence from your log to support your argument. Your assessment should conclude by reflecting on areas for improvement in the second half of the semester.
+
+You should submit this assignment to your Github portfolio repository as a .qmd in the `reflections` folder. Please be sure to have separate headings for each of the course's dimensions, and to clearly list the grade you would give yourself for each.
+
+I want you to think of this assignment as an opportunity to generate material that you might reference when preparing job or graduate school materials. In cover letters and interviews, you may be expected to recall and detail specific instances where you demonstrated professionalism, where you learned to manage conflict in a collaboration, or where you overcame a challenge in project management. I'm asking you to provide specific examples in support of a grade, not only as proof of why you deserve that grade, but also because it will give you practice in effective self-advocating.

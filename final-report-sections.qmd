@@ -9,15 +9,15 @@ editor: visual
 
 Be prepared to submit 300-500 detailing the problem that your project is addressing. Your goal in this section is to convince a stakeholder that this problem exists by describing the problem and then gathering evidence to support its existence. No solutions should be referenced at this point! Be sure to cite sources (if you're not sure how to sync with bibliography.bib, no worries. We will go over that soon.)
 
-As you are proving the existence of this problem, you may decide to organize your thoughts according to different scales of the problem, outline different causes of the problem, or to reference different stakeholders that may be impacted by the problem. ...while these provide good context for structuring your thinking, they shouldn't distract from the main goal - convincing that this problem exists. 
+As you are proving the existence of this problem, you may decide to organize your thoughts according to different scales of the problem, outline different causes of the problem, or to reference different stakeholders that may be impacted by the problem. ...while these provide good context for structuring your thinking, they shouldn't distract from the main goal - convincing that this problem exists.
 
 ## Sponsor Description
- 
-In a .qmd file, submit 300-500 words, introducing the organization that you are working with. In your write-up, you should describe organization and its overarching mission, along with the mission of the specific teams in the organization that you are working with. Finally, you should describe the sponsor's "ask" and how this relates to their mission. 
+
+In a .qmd file, submit 300-500 words, introducing the organization that you are working with. In your write-up, you should describe organization and its overarching mission, along with the mission of the specific teams in the organization that you are working with. Finally, you should describe the sponsor's "ask" and how this relates to their mission.
 
 ## Data Description
 
-In a .qmd file, submit 300-500 words, introducing the data resources that you will be working with to a lay audience. Some teams might not yet know all of these data sources, so you need only detail the ones that you know you will be working with. 
+In a .qmd file, submit 300-500 words, introducing the data resources that you will be working with to a lay audience. Some teams might not yet know all of these data sources, so you need only detail the ones that you know you will be working with.
 
 I have found in the past that detailing datasets to an audience unfamiliar with that data is really challenging. We have a tendency to want to describe the data's technical details rather than summarizing more generally what the data represents. I've included an example below to help you think through how to approach this. At the very least this section should include:
 
@@ -28,5 +28,20 @@ I have found in the past that detailing datasets to an audience unfamiliar with 
 -   A bit of its history/context
 -   A few data limitations
 
-> To address this problem, we analyzed a dataset put out by the US EPA *[<-- who produced it]* that documents the environmental compliance and enforcement history of every EPA-regulated facility in the US, including prisons *[<-- what it represents]*. For every EPA-regulated facility in the US in a given year *[<-- observational unit]*, the dataset reports information such as the permits the facility has been awarded, enforcement actions taken against the facility, and penalties it has assessed *[<-- variables]*. The EPA has been integrating this data from a number of different compliance databases for major federal regulations (such as the Clean Air Act and the Safe Drinking Water Act) for over ten years *[<-- history/context]*. The data tends to be more comprehensive for larger facilities than for smaller facilities and does not include information about compliance with all environmental laws *[<--limitations]*.
+> To address this problem, we analyzed a dataset put out by the US EPA *\[\<-- who produced it\]* that documents the environmental compliance and enforcement history of every EPA-regulated facility in the US, including prisons *\[\<-- what it represents\]*. For every EPA-regulated facility in the US in a given year *\[\<-- observational unit\]*, the dataset reports information such as the permits the facility has been awarded, enforcement actions taken against the facility, and penalties it has assessed *\[\<-- variables\]*. The EPA has been integrating this data from a number of different compliance databases for major federal regulations (such as the Clean Air Act and the Safe Drinking Water Act) for over ten years *\[\<-- history/context\]*. The data tends to be more comprehensive for larger facilities than for smaller facilities and does not include information about compliance with all environmental laws *\[\<--limitations\]*.
 
+### Detailed Methodology
+
+In a .qmd file in about 800-1000 words, write a first draft of the Methods section of your final report. This is going to look quite different for each of the projects. This section might include things like:
+
+1.  How did you acquire the data?
+2.  How did you clean and format the data?
+3.  How did you integrate the data?
+4.  How did you determine which metrics to use or how to calculate certain metrics?
+5.  How did you analyze the data?
+6.  What assumptions did you have to make when drawing conclusions from the data?
+7.  How did you automate certain processes?
+8.  What was the purpose of certain key functions you wrote?
+9.  Why did you select certain plots to visualize the data?
+
+As you are drafting this section, I encourage you to think about the key information a non-technical audience would need in order to understand how you plugged along towards the development of your deliverables. Remember that this is a *draft*, and aspects may change or be extended as you continue the project.
