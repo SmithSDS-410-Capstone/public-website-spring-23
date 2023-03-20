@@ -104,9 +104,12 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#problem-defintion" id="toc-problem-defintion" class="nav-link active" data-scroll-target="#problem-defintion">Problem Defintion</a></li>
+  <li><a href="#problem-definition" id="toc-problem-definition" class="nav-link active" data-scroll-target="#problem-definition">Problem Definition</a></li>
   <li><a href="#sponsor-description" id="toc-sponsor-description" class="nav-link" data-scroll-target="#sponsor-description">Sponsor Description</a></li>
-  <li><a href="#data-description" id="toc-data-description" class="nav-link" data-scroll-target="#data-description">Data Description</a></li>
+  <li><a href="#data-description" id="toc-data-description" class="nav-link" data-scroll-target="#data-description">Data Description</a>
+  <ul class="collapse">
+  <li><a href="#detailed-methodology" id="toc-detailed-methodology" class="nav-link" data-scroll-target="#detailed-methodology">Detailed Methodology</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -135,8 +138,8 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="problem-defintion" class="level2">
-<h2 class="anchored" data-anchor-id="problem-defintion">Problem Defintion</h2>
+<section id="problem-definition" class="level2">
+<h2 class="anchored" data-anchor-id="problem-definition">Problem Definition</h2>
 <p>Be prepared to submit 300-500 detailing the problem that your project is addressing. Your goal in this section is to convince a stakeholder that this problem exists by describing the problem and then gathering evidence to support its existence. No solutions should be referenced at this point! Be sure to cite sources (if you’re not sure how to sync with bibliography.bib, no worries. We will go over that soon.)</p>
 <p>As you are proving the existence of this problem, you may decide to organize your thoughts according to different scales of the problem, outline different causes of the problem, or to reference different stakeholders that may be impacted by the problem. …while these provide good context for structuring your thinking, they shouldn’t distract from the main goal - convincing that this problem exists.</p>
 </section>
@@ -159,8 +162,24 @@ ul.task-list li input[type="checkbox"] {
 <blockquote class="blockquote">
 <p>To address this problem, we analyzed a dataset put out by the US EPA <em>[&lt;– who produced it]</em> that documents the environmental compliance and enforcement history of every EPA-regulated facility in the US, including prisons <em>[&lt;– what it represents]</em>. For every EPA-regulated facility in the US in a given year <em>[&lt;– observational unit]</em>, the dataset reports information such as the permits the facility has been awarded, enforcement actions taken against the facility, and penalties it has assessed <em>[&lt;– variables]</em>. The EPA has been integrating this data from a number of different compliance databases for major federal regulations (such as the Clean Air Act and the Safe Drinking Water Act) for over ten years <em>[&lt;– history/context]</em>. The data tends to be more comprehensive for larger facilities than for smaller facilities and does not include information about compliance with all environmental laws <em>[&lt;–limitations]</em>.</p>
 </blockquote>
+<section id="detailed-methodology" class="level3">
+<h3 class="anchored" data-anchor-id="detailed-methodology">Detailed Methodology</h3>
+<p>In a .qmd file in about 800-1000 words, write a first draft of the Methods section of your final report. This is going to look quite different for each of the projects. This section might include things like:</p>
+<ol type="1">
+<li>How did you acquire the data?</li>
+<li>How did you clean and format the data?</li>
+<li>How did you integrate the data?</li>
+<li>How did you determine which metrics to use or how to calculate certain metrics?</li>
+<li>How did you analyze the data?</li>
+<li>What assumptions did you have to make when drawing conclusions from the data?</li>
+<li>How did you automate certain processes?</li>
+<li>What was the purpose of certain key functions you wrote?</li>
+<li>Why did you select certain plots to visualize the data?</li>
+</ol>
+<p>As you are drafting this section, I encourage you to think about the key information a non-technical audience would need in order to understand how you plugged along towards the development of your deliverables. Remember that this is a <em>draft</em>, and aspects may change or be extended as you continue the project.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
