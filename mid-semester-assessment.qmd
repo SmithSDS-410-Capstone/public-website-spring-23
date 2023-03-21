@@ -7,7 +7,13 @@ editor: visual
 
 ## Mid-Semester Assessment
 
-Following Spring Break, you should submit a 700-800-word mid-semester assessment of your work, grading yourself along each of the course's [seven dimensions](grading-contract.html). For each dimension, you will develop an argument for why you should receive a particular grade (A, B, C, D, etc), drawing evidence from your log to support your argument. Your assessment should conclude by reflecting on areas for improvement in the second half of the semester.
+Following Spring Break, you should submit a 700-800-word mid-semester assessment of your work, grading yourself along each of the course's [seven dimensions](grading_contract.html). For each dimension, you will develop an argument for why you should receive a particular grade (A, B, C, D, etc), drawing evidence from your log to support your argument. Your assessment should conclude by reflecting on areas for improvement in the second half of the semester.
+
+::: callout-tip
+## Keep in mind!
+
+Your grade in this course is about growth. Your justifications should **describe your growth along each dimension**, not just how you met certain criteria in the dimension. This means that when you are identifying examples to talk about in your write-up, your arguments should explain *how you developed new skills, new habits of working, or new ways of thinking through engagement in our course*. It’s one thing to say: “I met the professionalism dimension by submitting materials on time and showing up to each meeting”, but that doesn’t tell me that you’ve learned anything in the course. Use this opportunity to engage deeper reflection on what new skills you've learned.
+:::
 
 You should submit this assignment to your Github portfolio repository as a .qmd in the `reflections` folder. Please be sure to have separate headings for each of the course's dimensions, and to clearly list the grade you would give yourself for each.
 
