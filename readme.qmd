@@ -1,0 +1,87 @@
+---
+title: "README"
+author: "Lindsay Poirier"
+format: html
+editor: visual
+---
+
+::: callout-tip
+## Why am I asking you to do this?
+
+READMEs provide important administrative and descriptive metadata about a project repo - explaining key things like what is the code's purpose, who is responsible for the code, how timely are the data sources, and how others may use the code. Because of this, ensuring that project code repositories have a descriptive README is generally considered best practice in data science communities. This assignment is designed to:
+
+1. Give you practice in constructing a descriptive README.
+2. Ensure that your project outputs for this course embody best practices in the data science community. 
+3. Ensure that you've documented the contents of your GitHub repository for facilitating a seamless hand-off to your project sponsor. 
+
+:::
+
+Below is a Markdown template that you can use to generate your project repo. Note that you **do not** need to include every header in your final README. They won't all be relevant. You can use this as a guide for where to direct your attention. 
+
+```
+# Project Title
+
+## About
+
+Very briefly provide an overview of this repo. 
+
+## Contributors
+
+<!-- ALL-CONTRIBUTORS-LIST:START -->
+| Contributions | Name (alpha order) |
+| ----: | :---- |
+| [🔢](# "Content") [💻](# "Code") [🤔](# "Ideas and Planning") | [Name](DOI) |
+| [🔢](# "Content") [💻](# "Code") [🤔](# "Ideas and Planning") | [Name](DOI) |
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+(For a key to the contribution emoji or more info on this format, check out [“All Contributors.”](https://allcontributors.org/docs/en/emoji-key))
+
+## Dependencies
+
+If someone wanted to run this code on their computer, what would they need to do so? Special software? Package installations? Certain operating systems?
+
+## How to Install
+
+How would someone go about installing this software on their computer? This is particularly relevant if you are designing an `R` package.
+
+
+## How to Access
+
+If you are designing a shiny dashboard, how might someone access the working product? Is it hosted at a certain website?
+
+## Definitions
+
+What are the key terms that guide your data analysis? For instance, if your group is studying "political partisanship" how have you defined that in your data work?
+
+## Data Sources
+
+What are the sources of data you are working with in this project? How have you filtered them? Here you should provide a full citation of the data sources which includes when you last accessed them. 
+
+## Data Collection and Update Process
+
+Are any data processes automated? If so how often is the data updated? If the data needs to updated manually, how would someone go about doing that?
+
+
+## Repo Architecture
+
+How are files organized in the repository? Where should someone start? Where will they find the data sources - both original and cleaned?
+
+
+## License
+
+
+
+
+## How to Provide Feedback
+
+Questions, bug reports, and feature requests can be submitted to this repo's [issue queue](LINK-TO-REPO).
+
+
+## Have Questions?
+
+```
+
+
+
+
