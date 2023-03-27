@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.1.251">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Lindsay Poirier">
+
+<title>rticles</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="css/custom.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">SDS 410: SDS Capstone</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html">Syllabus</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./grading_contract.html">Self-Assessment</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./schedule.html">Schedule</a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#writing-reports-in-r" id="toc-writing-reports-in-r" class="nav-link active" data-scroll-target="#writing-reports-in-r">Writing Reports in <code>R</code></a>
+  <ul class="collapse">
+  <li><a href="#installing-rticles" id="toc-installing-rticles" class="nav-link" data-scroll-target="#installing-rticles">Installing <code>rticles</code></a></li>
+  <li><a href="#selecting-a-template" id="toc-selecting-a-template" class="nav-link" data-scroll-target="#selecting-a-template">Selecting a Template</a></li>
+  <li><a href="#yaml-header" id="toc-yaml-header" class="nav-link" data-scroll-target="#yaml-header">YAML Header</a></li>
+  <li><a href="#citing-sources" id="toc-citing-sources" class="nav-link" data-scroll-target="#citing-sources">Citing Sources</a></li>
+  </ul></li>
+  <li><a href="#tips-and-tricks" id="toc-tips-and-tricks" class="nav-link" data-scroll-target="#tips-and-tricks">Tips and Tricks</a>
+  <ul class="collapse">
+  <li><a href="#referencing-and-visualizations" id="toc-referencing-and-visualizations" class="nav-link" data-scroll-target="#referencing-and-visualizations">Referencing and Visualizations</a></li>
+  <li><a href="#captions-for-tables-and-visualizations" id="toc-captions-for-tables-and-visualizations" class="nav-link" data-scroll-target="#captions-for-tables-and-visualizations">Captions for Tables and Visualizations</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">rticles</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Lindsay Poirier </p>
+          </div>
+  </div>
+    
+    
+  </div>
+  
+
+</header>
+
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Important Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>At the start of the semester, I had planned on having you write your final report as a Quarto document. However, I’ve been finding that the support for formatting journal articles in Quarto has been a bit buggy, and I’d prefer for you to work with the <code>rticles</code> packages in .Rmd. This will mean that step one today will involve deleting the quarto documents from your GitHub repos.</p>
+</div>
+</div>
+<section id="question" class="level6">
+<h6 class="anchored" data-anchor-id="question">Question</h6>
+<div class="question">
+<p>One team member should navigate to the <code>final-report</code> folder in your GitHub repo. Delete <code>final-report.qmd</code>, <code>_extensions</code>, and <code>final-report-files</code>. Commit your changes and have your remaining group members pull them.</p>
+</div>
+</section>
+<section id="writing-reports-in-r" class="level2">
+<h2 class="anchored" data-anchor-id="writing-reports-in-r">Writing Reports in <code>R</code></h2>
+<p>The <code>rticles</code> package provides a series of LaTeX-based RMarkdown templates that support document preparation. It makes it possible to write documents in markdown and knit them in ways that align with various standardized formatting conventions. <code>rticles</code> documents can only be output as PDFs.</p>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+What is LaTeX?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>When you write text in Microsoft Word or Google Docs, you are presented with a series of buttons that you can use to format the text in a number of ways. When you use the buttons to apply formatting to the text, the editor restyles the text right in front of you. You can see what the change looks like. We call this WYSIWYG - what you see is what you get.</p>
+<p>LaTeX, on the other hand, is a software system in which helps you develop documents with standardized formatting. You write in plain text and use a series of standardized symbols to mark how you want the text formatted. Separately, template files designate global formatting rules that will be applied to the document when compiling and building it. Importantly, LaTeX provides a standardized method for adding and formatting citations.</p>
+</div>
+</div>
+<section id="installing-rticles" class="level3">
+<h3 class="anchored" data-anchor-id="installing-rticles">Installing <code>rticles</code></h3>
+<p>To install <code>rticles</code>, in your console enter:</p>
+<p><code>install.packages("rticles")</code></p>
+<section id="question-1" class="level6">
+<h6 class="anchored" data-anchor-id="question-1">Question</h6>
+<div class="question">
+<p>Install the <code>rticles</code> package.</p>
+</div>
+<section id="section" class="level7">
+<p class="heading"></p>
+</section>
+</section>
+</section>
+<section id="selecting-a-template" class="level3">
+<h3 class="anchored" data-anchor-id="selecting-a-template">Selecting a Template</h3>
+<p>Different academic journals have different expectations for how manuscripts will be formatted. Journals may differ in things like: - where titles, authors, and abstracts appear in the text - fonts and font sizes - margins and margin sizes - number of columns - how headings and sub-headings are enumerated - how headers, footers and page numbers appear - …and so on.</p>
+<p>Once the package is installed, you can select a template in RStudio as follows: <code>File &gt; New File &gt; RMarkdown &gt; From Template</code></p>
+<p>In this course, we are going to use the MDPI template.</p>
+<section id="question-2" class="level6">
+<h6 class="anchored" data-anchor-id="question-2">Question</h6>
+<div class="question">
+<p>A different group member should open your group GitHub repo. One team member should create a new RMarkdown file with the MDPI Template to be stored in the main directory. You can call this <code>term-paper</code>. This will create a folder with this name in your main directory. Commit your changes and have your team members pull the changes.</p>
+</div>
+<section id="section-1" class="level7">
+<p class="heading"></p>
+<p>When you create this folder, you will notice a number of files needed to compile the document. Here is a breakdown of some important files:</p>
+<ul>
+<li>the .Rmd file is where you will compose the report</li>
+<li>the .bib file is where the citations will be stored</li>
+<li>the .cls file is where the rules for formatting the paper according to MDPI standards are stored. You <strong>don’t</strong> need to edit this file.</li>
+<li>the .bst files are where the rules for formatting citations are stored. You <strong>don’t</strong> need to edit this file.</li>
+</ul>
+</section>
+</section>
+</section>
+<section id="yaml-header" class="level3">
+<h3 class="anchored" data-anchor-id="yaml-header">YAML Header</h3>
+<p><code>rticles</code> will take care of most of the styling of your document for you via the rules in the .cls file. However to provide the system with the metadata it needs to format your document, there are a series of tags that you will fill out in the YAML header of the .Rmd file, detailing things like what is the title, who are the authors, what are the keywords, etc. Here is an example:</p>
+<pre><code>---
+title: Short Paper
+author:
+  - name: Alice Anonymous
+    email: alice@example.com
+    affiliation: Some Institute of Technology
+    orcid: 0000-0000-0000-0000
+  - name: Bob Security
+    email: bob@example.com
+    affiliation: Another University
+abstract: |
+  This is the abstract.
+
+  It consists of two paragraphs.
+bibliography: sigproc.bib
+csl: acm-sig-proceedings.csl
+output: rticles::acm_article
+---</code></pre>
+<section id="question-3" class="level6">
+<h6 class="anchored" data-anchor-id="question-3">Question</h6>
+<div class="question">
+<p>Have all group members add their names and affiliations (including address) to the <code>term-paper.Rmd</code> YAML header. Note how, in this format, authors and affiliations are reported in two separate sections of the header. Discuss a strategy for avoiding merge conflicts when doing this. Be sure to Knit the document, and then commit, push, and pull changes.</p>
+</div>
+<section id="section-2" class="level7">
+<p class="heading"></p>
+<div class="callout-caution callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Knitting Error Resolution
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Because <code>rticles</code> provides LaTeX based templates you may need to install or update LaTeX to Knit documents. If you get a Knit error suggesting so, you can either run:</p>
+<p><code>tinytex::install_tinytex()</code></p>
+<p><code>tinytex::reinstall_tinytex(repository = "illinois")</code></p>
+</div>
+</div>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+What is an ORCID?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>An ORCID is an ID used to uniquely identify people that publish things. Let’s say I published a paper as a graduate student. My affiliation then was Rensselaer Polytechnic Institute. How does someone know that this is the same Lindsay Poirier that published a different paper at UC Davis or at Smith College? ORCID get associated with authors of papers in order to make it possible to uniquely identify authors that are constantly shifting affiliations. It also makes it possible to track an individual’s citations across different publishing platforms. You can register for an ORCID <a href="https://orcid.org/signin">here</a> if you don’t yet have one.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="question-4" class="level6">
+<h6 class="anchored" data-anchor-id="question-4">Question</h6>
+<div class="question">
+<p>Create an ORCID. Every group member should add their ORCID to the YAML header in <code>term-paper.Rmd</code>. Notice how this will go right below the affiliation. Knit, commit, push, and pull changes.</p>
+</div>
+<section id="section-3" class="level7">
+<p class="heading"></p>
+</section>
+</section>
+<section id="abbreviations" class="level4">
+<h4 class="anchored" data-anchor-id="abbreviations">Abbreviations</h4>
+<p>Note that in this YAML header you can list abbreviations that may appear in your final report, and write out their longer phrases.</p>
+<section id="question-5" class="level6">
+<h6 class="anchored" data-anchor-id="question-5">Question</h6>
+<div class="question">
+<p>As a group, identify one abbreviation that will likely appear in your final report. Have one team member add the short and long version to the YAML header. Knit, commit, push, and pull changes.</p>
+</div>
+<section id="section-4" class="level7">
+<p class="heading"></p>
+<p>There are several other sections of the YAML header that you should fill out as a team as you are putting together your first draft.</p>
+</section>
+</section>
+</section>
+</section>
+<section id="citing-sources" class="level3">
+<h3 class="anchored" data-anchor-id="citing-sources">Citing Sources</h3>
+<p>Zotero is a tool for managing citational metadata. It is a powerful way to keep all of the information you need to construct bibliographies in one place. We are going to use Zotero in this course because we will need to citational metadata to reference material in our final reports.</p>
+<section id="question-6" class="level6">
+<h6 class="anchored" data-anchor-id="question-6">Question</h6>
+<div class="question">
+<ol type="1">
+<li><p>If you don’t already have Zotero installed, you can install it from <a href="https://www.zotero.org/download/">this</a> link. Click on the <code>Download</code> button and follow the instructions.</p></li>
+<li><p>Download the Chrome Connector linked on the same page.</p></li>
+<li><p>Note that to be able to use the Zotero Chrome Connector, the Zotero app needs to be running on your desktop.</p></li>
+</ol>
+</div>
+<section id="section-5" class="level7">
+<p class="heading"></p>
+<p>When Web developers has designed web pages effectively, Zotero can parse the pages to pull citational metadata from the page. Most academic journals, news sites, and book publishers have set up their websites like this. We need this metadata to effectively build bibliographies for our final reports. To get the citational metadata for a source, you should follow these steps:</p>
+<ol type="1">
+<li><p>Once you have found the paper, article, or website you want to cite, click on the Zotero Connector extension on your Chrome window. This should be located in the top right corner of your Chrome window.</p></li>
+<li><p>Then, go to the Zotero app on your desktop. Locate the title corresponding to your source, right click on it, and then click on <strong>Export Item</strong>. This will open up an options tab.</p></li>
+<li><p>On the options tab, make sure that :</p></li>
+</ol>
+<blockquote class="blockquote">
+<ol type="i">
+<li>the <strong>Format</strong> is set to <strong>BibTeX</strong></li>
+<li>The <strong>Export Notes</strong> box is checked</li>
+<li>The <strong>Character Encoding</strong> option is set to <strong>Unicode (UTF-8)</strong></li>
+</ol>
+</blockquote>
+<ol start="4" type="1">
+<li>Then click OK and save the file.</li>
+</ol>
+</section>
+</section>
+<section id="question-7" class="level6">
+<h6 class="anchored" data-anchor-id="question-7">Question</h6>
+<div class="question">
+<p>Navigate <a href="https://scholarworks.smith.edu/sds_facpubs/20/">here</a>, add the citational metadata to Zotero and then export the citation to a file on your computer.</p>
+</div>
+<section id="section-6" class="level7">
+<p class="heading"></p>
+<p>These steps saved the citation in a bibtex format, which is a format that LaTeX can parse to create bibliographies. How do we then reference this citation in our projects?</p>
+<ol type="1">
+<li><p>Open the file where you had saved the citation created on Zotero.</p></li>
+<li><p>Copy the citation and paste it to the <code>mybibfile.bib</code> file in your <code>term_paper</code> folder created with the <code>rticles</code> package.</p></li>
+<li><p>Your newly added citation will look something like this:</p>
+<p><span class="citation" data-cites="article">@article</span>{CMS_HCC_Eval, title = {Evaluation of the {CMS}-{HCC} {Risk} {Adjustment} {Model}, {Final} {Report}}, language = {en}, pages = {127}, file = {Evaluation of the CMS-HCC Risk Adjustment Model, F.pdf:/Users/swahabhattacharya/Zotero/storage/AAWN6DS6/Evaluation of the CMS-HCC Risk Adjustment Model, F.pdf:application/pdf}, author = {Pope, Gregory C. and Kautter, John and Ingber, Melvin J. and Freeman, Sara and Sekar, Rishi and Newhart, Cordon} }</p></li>
+<li><p>The <code>@article</code> at the beginning of the citation describes the kind of source you are citing. The <code>CMS_HCC_Eval</code> right after it is the name of your citation – this is what you will use to reference your source in your paper.</p></li>
+<li><p>Now, to reference this citation in your paper, go to the point in the text where you are citing the paper. Then, add the citation by adding the name of your citation to your paper like this <span class="citation" data-cites="name_of_reference">[@name_of_reference]</span>. This will look something like:</p>
+<p>CMS conducts comprehensive evaluations of its CMS-HCC model on a regular basis <span class="citation" data-cites="CMS_HCC_Eval">[@CMS_HCC_Eval]</span>.</p></li>
+<li><p>This will automatically create a citation for you, which shows up at the end of the paper once you knit the .Rmd file.</p></li>
+</ol>
+</section>
+</section>
+<section id="question-8" class="level6">
+<h6 class="anchored" data-anchor-id="question-8">Question</h6>
+<div class="question">
+<p>Add the article that you just added to Zotero to your .bib file in <code>term-paper</code>. Then cite the paper you just added to Zotero somewhere in the text of <code>term-paper.Rmd</code>. Knit the document to ensure that the citational formatting worked.</p>
+</div>
+<section id="section-7" class="level7">
+<p class="heading"></p>
+</section>
+</section>
+</section>
+</section>
+<section id="tips-and-tricks" class="level2">
+<h2 class="anchored" data-anchor-id="tips-and-tricks">Tips and Tricks</h2>
+<section id="referencing-and-visualizations" class="level3">
+<h3 class="anchored" data-anchor-id="referencing-and-visualizations">Referencing and Visualizations</h3>
+<ol type="1">
+<li><p>To reference data visualization or an image at a particular point in your paper, first name to the R chunk where you create the visualization or read in the image. This will look something like this: <code>{r name}</code></p></li>
+<li><p>Then, go to the point in the paper where you want to link this graphic, and add the reference like so:<code>(\ref{fig:name})</code>. This will automatically number the visualizations and create references for them.</p></li>
+</ol>
+<section id="question-9" class="level6">
+<h6 class="anchored" data-anchor-id="question-9">Question</h6>
+<div class="question">
+<p>Create an R chunk in <code>term-paper.Rmd</code>, and name it example-plot. Enter the following code.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(cars)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="rticles_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>Use the strategy outlined above to link the reference to the plot to a certain piece of example text in <code>term-paper.Rmd</code>.</p>
+</div>
+<section id="section-8" class="level7">
+<p class="heading"></p>
+</section>
+</section>
+</section>
+<section id="captions-for-tables-and-visualizations" class="level3">
+<h3 class="anchored" data-anchor-id="captions-for-tables-and-visualizations">Captions for Tables and Visualizations</h3>
+<ol type="1">
+<li>When you are creating captions for the tables and visualizations in your paper, make sure to exclude any underscores (<code>_</code>) since this will give you an error while knitting. Instead, use spaces or dashes (<code>-</code>).</li>
+</ol>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

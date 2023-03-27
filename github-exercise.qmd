@@ -11,31 +11,31 @@ In this exercise, you will work through solving merge conflicts. To do this:
 
 1.  Open your group repository on your local computer
 
-2. Swap your name with someone else's in `problem-definitions.qmd`, without discussing it with your teammates
+2.  Swap your name with someone else's in `problem-definitions.qmd`, without discussing it with your teammates
 
-3. Commit and push your changes
+3.  Commit and push your changes
 
-4. Fix the merge conflicts by working with your team members
+4.  Fix the merge conflicts by working with your team members
 
 ## Exercise 2: Merge Conflicts across Branches
 
-1. Review recommended style guide headings at this [link](https://smithsds-410-capstone.github.io/public-website-spring-23/style-guides.html). Assign a section of the style-guide document to each member of your team.
+1.  Review recommended style guide headings at this [link](https://smithsds-410-capstone.github.io/public-website-spring-23/style-guides.html). Assign a section of the style-guide document to each member of your team.
 
-2. Each of you will then create your own branch.
+2.  Each of you will then create your own branch.
 
-3. Each of you will add a section or a question related to the style guide on line 12 in the `style-guide.qmd` document in your respective branch.
+3.  Each of you will add a section or a question related to the style guide on line 12 in the `style-guide.qmd` document in your respective branch.
 
-4. Commit and push your changes.
+4.  Commit and push your changes.
 
-5. Create a pull request to merge back into main. Collaborate with your team to address any merge conflicts, as you merge all changes.
+5.  Create a pull request to merge back into main. Collaborate with your team to address any merge conflicts, as you merge all changes.
 
-6. Delete your branches after all your changes have been merged.
+6.  Delete your branches after all your changes have been merged.
 
 ## Exercise 3: Formatting Messy R code
 
 In this exercise, you will work on formatting the given R code according to some agreed upon style conventions.
 
-1. One team member will create an R script in the collaboration-docs folder in your group project repository and copy the following R code onto it. Commit and push your changes. 
+1.  One team member will create an R script in the collaboration-docs folder in your group project repository and copy the following R code onto it. Commit and push your changes.
 
 ```{r, message=FALSE, warning=FALSE}
 # loading libraries
@@ -70,22 +70,16 @@ Mystery_dest %>%
 # write.csv(mysteryPlanes, "Path to export the DataFrame\\File Name.csv", row.names=FALSE)
 ```
 
-2. All other members of the team will pull the changes onto their local system.
+2.  All other members of the team will pull the changes onto their local system.
 
-3. Each of you will then create your own branch.
+3.  Each of you will then create your own branch.
 
-4. Divide the code among yourselves so that each of you works on a different part of the code.
+4.  Divide the code among yourselves so that each of you works on a different part of the code.
 
-5. Discuss some stylistic standards that your team will follow. Eventually, these will be listed in your style guide. 
+5.  Discuss some stylistic standards that your team will follow. Eventually, these will be listed in your style guide.
 
-6. Each of you will format your part of the code according to the standards you've agreed upon.
+6.  Each of you will format your part of the code according to the standards you've agreed upon.
 
-7. Commit and push your changes.
+7.  Commit and push your changes.
 
-8. Create a pull request to merge your changes back into main. Don't merge the changes yet.
-
-
-
-
-
-
+8.  Create a pull request to merge your changes back into main. Don't merge the changes yet.

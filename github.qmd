@@ -114,7 +114,7 @@ Typically I recommend the long and elegant version for group work as it is desig
 ###### Question
 
 ::: question
-Navigate to [GitHub Classroom](https://classroom.github.com/a/fwZ6JcD-) to accept the assignment. For this assignment, you will work in teams of 3 at most. 
+Navigate to [GitHub Classroom](https://classroom.github.com/a/fwZ6JcD-) to accept the assignment. For this assignment, you will work in teams of 3 at most.
 :::
 
 ####### 
@@ -420,4 +420,3 @@ Once this change has been made, that group mate should stage, commit, and push t
 I have been working with GitHub for years, and even to this day, I run into instances where things become so inconsistent between my local machine and the repo at GitHub.com that the fastest way to fix things is just to save local copies of the files that I've changed to somewhere else on my machine, delete the super fancy Git folder from its current location, and then re-clone the most up-to-date remote version to my local machine. Then I can figure out how I want to edit the most up-to-date version with my changes. This comic from XKCD captures this widely acknowledged solution beautifully:
 
 ![](https://imgs.xkcd.com/comics/git.png){fig-alt="This is a comic explaining why we sometimes just delete our local git repos and reclone."}
-

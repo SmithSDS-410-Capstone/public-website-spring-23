@@ -1,0 +1,231 @@
+---
+title: "rticles"
+author: "Lindsay Poirier"
+format: html
+editor: visual
+---
+
+::: callout-note
+## Important Note
+
+At the start of the semester, I had planned on having you write your final report as a Quarto document. However, I've been finding that the support for formatting journal articles in Quarto has been a bit buggy, and I'd prefer for you to work with the `rticles` packages in .Rmd. This will mean that step one today will involve deleting the quarto documents from your GitHub repos.
+:::
+
+###### Question
+
+::: question
+One team member should navigate to the `final-report` folder in your GitHub repo. Delete `final-report.qmd`, `_extensions`, and `final-report-files`. Commit your changes and have your remaining group members pull them.
+:::
+
+## Writing Reports in `R`
+
+The `rticles` package provides a series of LaTeX-based RMarkdown templates that support document preparation. It makes it possible to write documents in markdown and knit them in ways that align with various standardized formatting conventions. `rticles` documents can only be output as PDFs.
+
+::: callout-note
+## What is LaTeX?
+
+When you write text in Microsoft Word or Google Docs, you are presented with a series of buttons that you can use to format the text in a number of ways. When you use the buttons to apply formatting to the text, the editor restyles the text right in front of you. You can see what the change looks like. We call this WYSIWYG - what you see is what you get.
+
+LaTeX, on the other hand, is a software system in which helps you develop documents with standardized formatting. You write in plain text and use a series of standardized symbols to mark how you want the text formatted. Separately, template files designate global formatting rules that will be applied to the document when compiling and building it. Importantly, LaTeX provides a standardized method for adding and formatting citations.
+:::
+
+### Installing `rticles`
+
+To install `rticles`, in your console enter:
+
+`install.packages("rticles")`
+
+###### Question
+
+::: question
+Install the `rticles` package.
+:::
+
+####### 
+
+### Selecting a Template
+
+Different academic journals have different expectations for how manuscripts will be formatted. Journals may differ in things like: - where titles, authors, and abstracts appear in the text - fonts and font sizes - margins and margin sizes - number of columns - how headings and sub-headings are enumerated - how headers, footers and page numbers appear - ...and so on.
+
+Once the package is installed, you can select a template in RStudio as follows: `File > New File > RMarkdown > From Template`
+
+In this course, we are going to use the MDPI template.
+
+###### Question
+
+::: question
+A different group member should open your group GitHub repo. One team member should create a new RMarkdown file with the MDPI Template to be stored in the main directory. You can call this `term-paper`. This will create a folder with this name in your main directory. Commit your changes and have your team members pull the changes.
+:::
+
+####### 
+
+When you create this folder, you will notice a number of files needed to compile the document. Here is a breakdown of some important files:
+
+-   the .Rmd file is where you will compose the report
+-   the .bib file is where the citations will be stored
+-   the .cls file is where the rules for formatting the paper according to MDPI standards are stored. You **don't** need to edit this file.
+-   the .bst files are where the rules for formatting citations are stored. You **don't** need to edit this file.
+
+### YAML Header
+
+`rticles` will take care of most of the styling of your document for you via the rules in the .cls file. However to provide the system with the metadata it needs to format your document, there are a series of tags that you will fill out in the YAML header of the .Rmd file, detailing things like what is the title, who are the authors, what are the keywords, etc. Here is an example:
+
+    ---
+    title: Short Paper
+    author:
+      - name: Alice Anonymous
+        email: alice@example.com
+        affiliation: Some Institute of Technology
+        orcid: 0000-0000-0000-0000
+      - name: Bob Security
+        email: bob@example.com
+        affiliation: Another University
+    abstract: |
+      This is the abstract.
+
+      It consists of two paragraphs.
+    bibliography: sigproc.bib
+    csl: acm-sig-proceedings.csl
+    output: rticles::acm_article
+    ---
+
+###### Question
+
+::: question
+Have all group members add their names and affiliations (including address) to the `term-paper.Rmd` YAML header. Note how, in this format, authors and affiliations are reported in two separate sections of the header. Discuss a strategy for avoiding merge conflicts when doing this. Be sure to Knit the document, and then commit, push, and pull changes.
+:::
+
+####### 
+
+::: callout-caution
+## Knitting Error Resolution
+
+Because `rticles` provides LaTeX based templates you may need to install or update LaTeX to Knit documents. If you get a Knit error suggesting so, you can either run:
+
+`tinytex::install_tinytex()`
+
+`tinytex::reinstall_tinytex(repository = "illinois")`
+:::
+
+::: callout-note
+## What is an ORCID?
+
+An ORCID is an ID used to uniquely identify people that publish things. Let's say I published a paper as a graduate student. My affiliation then was Rensselaer Polytechnic Institute. How does someone know that this is the same Lindsay Poirier that published a different paper at UC Davis or at Smith College? ORCID get associated with authors of papers in order to make it possible to uniquely identify authors that are constantly shifting affiliations. It also makes it possible to track an individual's citations across different publishing platforms. You can register for an ORCID [here](https://orcid.org/signin) if you don't yet have one.
+:::
+
+###### Question
+
+::: question
+Create an ORCID. Every group member should add their ORCID to the YAML header in `term-paper.Rmd`. Notice how this will go right below the affiliation. Knit, commit, push, and pull changes.
+:::
+
+####### 
+
+#### Abbreviations
+
+Note that in this YAML header you can list abbreviations that may appear in your final report, and write out their longer phrases. 
+
+###### Question
+
+::: question
+As a group, identify one abbreviation that will likely appear in your final report. Have one team member add the short and long version to the YAML header. Knit, commit, push, and pull changes. 
+:::
+
+#######
+
+
+There are several other sections of the YAML header that you should fill out as a team as you are putting together your first draft. 
+
+
+### Citing Sources
+
+Zotero is a tool for managing citational metadata. It is a powerful way to keep all of the information you need to construct bibliographies in one place. We are going to use Zotero in this course because we will need to citational metadata to reference material in our final reports. 
+
+###### Question
+
+::: question
+1.  If you don't already have Zotero installed, you can install it from [this](https://www.zotero.org/download/) link. Click on the `Download` button and follow the instructions.
+
+2.  Download the Chrome Connector linked on the same page.
+
+3.  Note that to be able to use the Zotero Chrome Connector, the Zotero app needs to be running on your desktop.
+:::
+
+#######
+
+When Web developers has designed web pages effectively, Zotero can parse the pages to pull citational metadata from the page. Most academic journals, news sites, and book publishers have set up their websites like this. We need this metadata to effectively build bibliographies for our final reports. To get the citational metadata for a source, you should follow these steps:
+
+1.  Once you have found the paper, article, or website you want to cite, click on the Zotero Connector extension on your Chrome window. This should be located in the top right corner of your Chrome window.
+
+2.  Then, go to the Zotero app on your desktop. Locate the title corresponding to your source, right click on it, and then click on **Export Item**. This will open up an options tab.
+
+3.  On the options tab, make sure that :
+
+> i.  the **Format** is set to **BibTeX**
+> ii. The **Export Notes** box is checked
+> iii. The **Character Encoding** option is set to **Unicode (UTF-8)**
+
+4.  Then click OK and save the file.
+
+
+###### Question
+
+::: question
+Navigate [here](https://scholarworks.smith.edu/sds_facpubs/20/), add the citational metadata to Zotero and then export the citation to a file on your computer.
+:::
+
+#######
+
+These steps saved the citation in a bibtex format, which is a format that LaTeX can parse to create bibliographies. How do we then reference this citation in our projects?
+
+1.  Open the file where you had saved the citation created on Zotero.
+
+2.  Copy the citation and paste it to the `mybibfile.bib` file in your `term_paper` folder created with the `rticles` package.
+
+3.  Your newly added citation will look something like this:
+
+    @article{CMS_HCC_Eval, title = {Evaluation of the {CMS}-{HCC} {Risk} {Adjustment} {Model}, {Final} {Report}}, language = {en}, pages = {127}, file = {Evaluation of the CMS-HCC Risk Adjustment Model, F.pdf:/Users/swahabhattacharya/Zotero/storage/AAWN6DS6/Evaluation of the CMS-HCC Risk Adjustment Model, F.pdf:application/pdf}, author = {Pope, Gregory C. and Kautter, John and Ingber, Melvin J. and Freeman, Sara and Sekar, Rishi and Newhart, Cordon} }
+
+4.  The `@article` at the beginning of the citation describes the kind of source you are citing. The `CMS_HCC_Eval` right after it is the name of your citation -- this is what you will use to reference your source in your paper.
+
+5.  Now, to reference this citation in your paper, go to the point in the text where you are citing the paper. Then, add the citation by adding the name of your citation to your paper like this [@name_of_reference]. This will look something like:
+
+    CMS conducts comprehensive evaluations of its CMS-HCC model on a regular basis [@CMS_HCC_Eval].
+
+6.  This will automatically create a citation for you, which shows up at the end of the paper once you knit the .Rmd file.
+
+###### Question
+
+::: question
+Add the article that you just added to Zotero to your .bib file in `term-paper`. Then cite the paper you just added to Zotero somewhere in the text of `term-paper.Rmd`. Knit the document to ensure that the citational formatting worked. 
+:::
+
+#######
+
+
+## Tips and Tricks
+
+### Referencing and Visualizations
+
+1.  To reference data visualization or an image at a particular point in your paper, first name to the R chunk where you create the visualization or read in the image. This will look something like this: `{r name}`
+
+2.  Then, go to the point in the paper where you want to link this graphic, and add the reference like so:`(\ref{fig:name})`. This will automatically number the visualizations and create references for them.
+
+###### Question
+
+::: question
+Create an R chunk in `term-paper.Rmd`, and name it example-plot. Enter the following code. 
+
+```{r}
+plot(cars)
+```
+
+Use the strategy outlined above to link the reference to the plot to a certain piece of example text in `term-paper.Rmd`. 
+:::
+
+#######
+
+### Captions for Tables and Visualizations
+
+1.  When you are creating captions for the tables and visualizations in your paper, make sure to exclude any underscores (`_`) since this will give you an error while knitting. Instead, use spaces or dashes (`-`).
+
