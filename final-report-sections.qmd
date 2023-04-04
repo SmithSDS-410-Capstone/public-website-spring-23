@@ -8,12 +8,12 @@ editor: visual
 ::: callout-tip
 ## Why am I asking you to do this?
 
-Writing a final report has historically been a required component of the capstone course for a few reasons: 
+Writing a final report has historically been a required component of the capstone course for a few reasons:
 
-1. The Statistical & Data Sciences Program is committed to ensuring that our students learn the skills necessary to become exemplary writers within our field. Because of this SDS recently adopted a curricular model called Writing Enriched Curriculum, which has enabled us to articulate the [writing skills](https://docs.google.com/document/d/1wN58jvrHeS9j9J4S0RDxs_szFFikka3P4mV4YmQwK6A/edit) we hope our graduates will acquire. Since all majors are required to take capstone, the SDS Program has prioritized capstone as a space where writing should be meaningfully integrated into the curriculum. In other words, capstone is a space where you have an opportunity to demonstrate how your writing skills have developed.
-2. Since you are working with a sponsor, the final report serves as an important resource for generating detailed documentation of your project, including its aims, its methods, and its outcomes. 
-3. The drafting of a report gives you an opportunity to practice producing text that aligns with the genre conventions of our field. 
-4. The final report can hopefully serve as important portfolio material for you. 
+1.  The Statistical & Data Sciences Program is committed to ensuring that our students learn the skills necessary to become exemplary writers within our field. Because of this SDS recently adopted a curricular model called Writing Enriched Curriculum, which has enabled us to articulate the [writing skills](https://docs.google.com/document/d/1wN58jvrHeS9j9J4S0RDxs_szFFikka3P4mV4YmQwK6A/edit) we hope our graduates will acquire. Since all majors are required to take capstone, the SDS Program has prioritized capstone as a space where writing should be meaningfully integrated into the curriculum. In other words, capstone is a space where you have an opportunity to demonstrate how your writing skills have developed.
+2.  Since you are working with a sponsor, the final report serves as an important resource for generating detailed documentation of your project, including its aims, its methods, and its outcomes.
+3.  The drafting of a report gives you an opportunity to practice producing text that aligns with the genre conventions of our field.
+4.  The final report can hopefully serve as important portfolio material for you.
 :::
 
 ## Problem Definition
@@ -41,7 +41,7 @@ I have found in the past that detailing datasets to an audience unfamiliar with 
 
 > To address this problem, we analyzed a dataset put out by the US EPA *\[\<-- who produced it\]* that documents the environmental compliance and enforcement history of every EPA-regulated facility in the US, including prisons *\[\<-- what it represents\]*. For every EPA-regulated facility in the US in a given year *\[\<-- observational unit\]*, the dataset reports information such as the permits the facility has been awarded, enforcement actions taken against the facility, and penalties it has assessed *\[\<-- variables\]*. The EPA has been integrating this data from a number of different compliance databases for major federal regulations (such as the Clean Air Act and the Safe Drinking Water Act) for over ten years *\[\<-- history/context\]*. The data tends to be more comprehensive for larger facilities than for smaller facilities and does not include information about compliance with all environmental laws *\[\<--limitations\]*.
 
-### Detailed Methodology
+## Detailed Methodology
 
 In a .qmd file in about 800-1000 words, write a first draft of the Methods section of your final report. This is going to look quite different for each of the projects. This section might include things like:
 
@@ -56,3 +56,26 @@ In a .qmd file in about 800-1000 words, write a first draft of the Methods secti
 9.  Why did you select certain plots to visualize the data?
 
 As you are drafting this section, I encourage you to think about the key information a non-technical audience would need in order to understand how you plugged along towards the development of your deliverables. Remember that this is a *draft*, and aspects may change or be extended as you continue the project.
+
+## Findings/Outputs
+
+In a .qmd file in about 600-800 words, write a first draft of the Results/Findings/Outputs section of your final report. This is going to look quite different for each of the projects, depending on the scope of your deliverables. This section might include things like:
+
+1.  What were the primary findings of your statistical analyses (in relation to original research questions)? (e.g. "We found that...\[give us key numbers, stats, and summaries of figures\].")
+2.  What were some of the secondary findings of your analyses (perhaps beyond the scope of the original research questions)?
+3.  How might we contextually interpret the project findings? (e.g. "This indicates that...")
+4.  What products did you produce (e.g. `R` packages, `shiny` dashboards), and what were some of their key features?
+5.  In what ways did your deliverables match the expectations of the project sponsor?
+
+## Introduction
+
+Your introduction should be 300-500 words and should be some combination of your problem definition, sponsor description, the scope of your solution, and an outline of the remaining sections of the report.
+
+## Conclusion
+
+Your conclusion should be about 300-500 words and do four things:
+
+1.  Briefly summarize what you completed in your project
+2.  Discuss how your project addressed (or didn't address) the problems outlined in your problem statement
+3.  Outline some of the limitations of your approach
+4.  Present some suggestions for further work (i.e. How could this project be extended with more time and resources?)
