@@ -18,6 +18,8 @@ Writing a final report has historically been a required component of the capston
 
 # First Draft
 
+> Please note that the first draft of the report should be submitted in the MDPI Rticles format with all citation metadata included in a separate .bib file and referenced in-line.
+
 ## Introduction
 
 Your introduction should be 300-500 words and should introduce your project to an audience unfamiliar with our capstone course. This section will be some combination of your problem definition, sponsor description, the scope of your solution, and an outline of the remaining sections of the report.
@@ -91,6 +93,8 @@ Your conclusion should be about 300-500 words and do four things:
 4.  Present some suggestions for further work (i.e. How could this project be extended with more time and resources?)
 
 # Final Draft
+
+> Be sure that the final draft includes a brief abstract summarizing the contents of the report, along with keywords.
 
 ## Ethics Statement
 
