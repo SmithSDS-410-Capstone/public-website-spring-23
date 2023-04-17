@@ -410,7 +410,7 @@
     "href": "final.html",
     "title": "Final Presentations",
     "section": "",
-    "text": "Presenting on a project’s outcomes is a key component to almost any job. Your mid-term presentation focused predominantly on the aims of your work, your project plan, and the methods you will engage to achieve your aims. The final presentation will focus predominantly on the results of your work.\n\n\nYou should prepare a slide deck to present in class. All members of your team will be expected to contribute to the delivery of your presentation. To ensure seamless transitions, I encourage you to practice “handing off” sections of the presentation.\n\n\n\nYour mid-term presentation should be about 12 minutes long (10 minutes minimum; 13 minutes maximum). This will allow 5 minutes for question and answer. Please rehearse ahead of time to ensure that you can meet this time benchmark.\n\n\n\nThe main goal of this presentation is to present your findings and outputs to the class. The presentation should include:\n\na brief introduction to your sponsor and the problem they posed\na brief introduction to the data/systems you worked with\na description of your project methodology (including any major shifts to your original project plan)\na description of your key findings/outputs\n\nThis part should be at least a third of the presentation (~4 minutes)\nYou may include demos/screenshots in this section\nBe sure to explain the takeaways for any plots/visualizations.\n\na note on ethical issues you encountered\n\nBe sure that your presentation opens with an introduction that highlights what you will discuss and closes with a conclusion that summarizes what you discussed.\n\n\n\nThe audience for this presentation will be our class and all of the capstone sponors. So you can assume basic knowledge of data science and statistics, but you shouldn’t assume previous exposure to your project.\nIt will be particularly important to think through how you present your methods and findings to this audience."
+    "text": "Presenting on a project’s outcomes is a key component to almost any job. Your mid-term presentation focused predominantly on the aims of your work, your project plan, and the methods you will engage to achieve your aims. The final presentation will focus predominantly on the results of your work.\n\n\nTo prepare for your final presentation, I encourage you to review the video recording of your mid-semester presentation, paying particular attention to the sections where you spoke. As you review this recording, reflect on the questions at this link. Based on your assessment of your presentation, you should identify three areas of growth for the final presentation. You do not need to submit anything for this.\n\n\n\nYou should prepare a slide deck to present in class. All members of your team will be expected to contribute to the delivery of your presentation. To ensure seamless transitions, I encourage you to practice “handing off” sections of the presentation.\n\n\n\nYour mid-term presentation should be about 12 minutes long (10 minutes minimum; 13 minutes maximum). This will allow 5 minutes for question and answer. Please rehearse ahead of time to ensure that you can meet this time benchmark.\n\n\n\nThe main goal of this presentation is to present your findings and outputs to the class. The presentation should include:\n\na brief introduction to your sponsor and the problem they posed\na brief introduction to the data/systems you worked with\na description of your project methodology (including any major shifts to your original project plan)\na description of your key findings/outputs\n\nThis part should be at least a third of the presentation (~4 minutes)\nYou may include demos/screenshots in this section\nBe sure to explain the takeaways for any plots/visualizations.\n\na note on ethical issues you encountered\n\nBe sure that your presentation opens with an introduction that highlights what you will discuss and closes with a conclusion that summarizes what you discussed.\n\n\n\nThe audience for this presentation will be our class and all of the capstone sponors. So you can assume basic knowledge of data science and statistics, but you shouldn’t assume previous exposure to your project.\nIt will be particularly important to think through how you present your methods and findings to this audience."
   },
   {
     "objectID": "final-assessment.html",
@@ -418,5 +418,47 @@
     "title": "Final Assessment",
     "section": "",
     "text": "Why am I asking you to do this?\n\n\n\n\nThis assignment seeks to provide you with an opportunity to reflect on your personal growth in the course and more deeply engage with considerations on where you’d like to improve. Swaths of research indicate that learning improves when students are provided with explicit opportunities for this kind of reflection.\nThe ability to critically evaluate your own performance is an important skill that you will engage no matter where your career takes you post-graduation.\nThis assignment is designed to help strengthen your general review practices, by asking you to provide evidence and reasoning for a particular evaluation.\nThis assignment is meant to give you more agency over how you are assessed in this course.\n\n\n\nBy the last day of class, you should submit a minimum 1000-word mid-semester assessment of your work, grading yourself along each of the course’s seven dimensions. To help ensure that your responses are focused on your growth in the course, this time around I’m providing you with a prompt that you can use to structure each section. Imagine that you are on a interview for a data science position. For each section you should respond to the following interview question:\n\nDescribe a time (in capstone) when you faced a challenge related to [dimension]. How did you respond to the challenge? What did you learn from this experience that you will carry with you? How does this demonstrate growth?\n\n\n\n\n\n\n\nKeep in mind!\n\n\n\nYour grade in this course is about growth. Your justifications should describe your growth along each dimension, not just how you met certain criteria in the dimension. This means that when you are identifying examples to talk about in your write-up, your arguments should explain how you developed new skills, new habits of working, or new ways of thinking through engagement in our course.\n\n\nYou should submit this assignment to your Github portfolio repository as a .qmd in the reflections folder. Please be sure to have separate headings for each of the course’s dimensions, and to clearly list the grade (A, B, C, D) you would give yourself for each."
+  },
+  {
+    "objectID": "presentation-tips.html",
+    "href": "presentation-tips.html",
+    "title": "Presentation Tips",
+    "section": "",
+    "text": "This document lists a few important criteria you might consider when evaluating your mid-semester presentations and preparing for your final presentations."
+  },
+  {
+    "objectID": "presentation-tips.html#body-language-movement",
+    "href": "presentation-tips.html#body-language-movement",
+    "title": "Presentation Tips",
+    "section": "Body Language/ Movement",
+    "text": "Body Language/ Movement\n\nCharacterize the speaker’s posture. Is the speaker slouching? Poised? Stiff or rigid? Inviting? Relaxed? Did you find the speaker’s posture distracting? Would you have noticed it if you weren’t looking for it?\nCharacterize the speaker’s eye contact with the audience. Did the speaker seem to connect with people throughout the audience? Did you notice moments when the speaker was looking down? If so, did you feel like the speaker lost a connection with the audience in these moments?"
+  },
+  {
+    "objectID": "presentation-tips.html#oration",
+    "href": "presentation-tips.html#oration",
+    "title": "Presentation Tips",
+    "section": "Oration",
+    "text": "Oration\n\nCharacterize the pace of the presenter’s speech. Did you have a hard time keeping up with the speaker? When did the speaker speed up, and when did the speaker slow down? How effective was the pacing of speech in delivering the presentation?\nHow much vocal variety was in the speaker’s voice? Was the presenter monotonous or droning in their speech? When did the pitch of their voice rise and drop? How effective was the variation in their vocals in keeping the audience engaged?\nHow well did the speaker articulate words? Were the words and sentences of the presentation crisp and easy to discern? Did you have trouble making out any of the speaker’s words? Did the speaker appear to be mumbling at certain points? What were some of the speaker’s filler words (um’s, like’s, you know’s)? Were they distracting?"
+  },
+  {
+    "objectID": "presentation-tips.html#composition",
+    "href": "presentation-tips.html#composition",
+    "title": "Presentation Tips",
+    "section": "Composition",
+    "text": "Composition\n\nWhen did the presenter pause throughout the presentation? Were pauses used as dramatic effect – allowing a compelling statement to sink in? Were they used for the speaker to catch their breath? Did the speaker stop to take a sip of water? How effectively were pauses used throughout the presentation?"
+  },
+  {
+    "objectID": "presentation-tips.html#content-and-organization",
+    "href": "presentation-tips.html#content-and-organization",
+    "title": "Presentation Tips",
+    "section": "Content and Organization",
+    "text": "Content and Organization\n\nAt what point in the presentation were you able to grasp the presenter’s thesis or main argument? If it was later in the presentation, did you feel confused up until that point? If it was earlier, did you feel the presentation lacked suspense? Did you find the timing of the delivery of the thesis effective?\nWhat strategies did the presenter use to make difficult concepts more accessible? Did the presenter define key terms, and if so, were these definitions clear and easy to comprehend? Did the presenter provide examples, and if so, to what extent did these examples help you grasp the meaning of the concept?"
+  },
+  {
+    "objectID": "presentation-tips.html#visualsgraphics",
+    "href": "presentation-tips.html#visualsgraphics",
+    "title": "Presentation Tips",
+    "section": "Visuals/Graphics",
+    "text": "Visuals/Graphics\n\nHow did the presenter use visuals or graphics throughout the presentation? To what extent did the visuals help to support the presenter’s argument? Were you able to readily make sense of what you were looking at? Were you able to pay attention to what the speaker was saying as you viewed the graphics? What about the graphics (their size, their color, their color variation, their complexity) played a role in your ability to stay connected with the speaker while viewing the graphic?\nDid the presenter have any text on their presentation slides? If so, how dense was the text? Were you able to read the text and still pay attention to what the speaker was saying? What about the text (its size, its color, its color variation, its complexity) played a role in your ability to stay connected with the speaker while viewing the text? To what extent did the text help to support the presenter’s argument?"
   }
 ]
