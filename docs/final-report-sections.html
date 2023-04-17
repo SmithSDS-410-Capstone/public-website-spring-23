@@ -104,13 +104,18 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#problem-definition" id="toc-problem-definition" class="nav-link active" data-scroll-target="#problem-definition">Problem Definition</a></li>
-  <li><a href="#sponsor-description" id="toc-sponsor-description" class="nav-link" data-scroll-target="#sponsor-description">Sponsor Description</a></li>
+  <li><a href="#first-draft" id="toc-first-draft" class="nav-link active" data-scroll-target="#first-draft">First Draft</a>
+  <ul class="collapse">
+  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction</a></li>
   <li><a href="#data-description" id="toc-data-description" class="nav-link" data-scroll-target="#data-description">Data Description</a></li>
   <li><a href="#detailed-methodology" id="toc-detailed-methodology" class="nav-link" data-scroll-target="#detailed-methodology">Detailed Methodology</a></li>
   <li><a href="#findingsoutputs" id="toc-findingsoutputs" class="nav-link" data-scroll-target="#findingsoutputs">Findings/Outputs</a></li>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction</a></li>
   <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
+  </ul></li>
+  <li><a href="#final-draft" id="toc-final-draft" class="nav-link" data-scroll-target="#final-draft">Final Draft</a>
+  <ul class="collapse">
+  <li><a href="#ethics-statement" id="toc-ethics-statement" class="nav-link" data-scroll-target="#ethics-statement">Ethics Statement</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -158,18 +163,44 @@ Why am I asking you to do this?
 </ol>
 </div>
 </div>
-<section id="problem-definition" class="level2">
-<h2 class="anchored" data-anchor-id="problem-definition">Problem Definition</h2>
+<section id="first-draft" class="level1">
+<h1>First Draft</h1>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>Your introduction should be 300-500 words and should introduce your project to an audience unfamiliar with our capstone course. This section will be some combination of your problem definition, sponsor description, the scope of your solution, and an outline of the remaining sections of the report.</p>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Problem Definition
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <p>Be prepared to submit 300-500 detailing the problem that your project is addressing. Your goal in this section is to convince a stakeholder that this problem exists by describing the problem and then gathering evidence to support its existence. No solutions should be referenced at this point! Be sure to cite sources (if you’re not sure how to sync with bibliography.bib, no worries. We will go over that soon.)</p>
 <p>As you are proving the existence of this problem, you may decide to organize your thoughts according to different scales of the problem, outline different causes of the problem, or to reference different stakeholders that may be impacted by the problem. …while these provide good context for structuring your thinking, they shouldn’t distract from the main goal - convincing that this problem exists.</p>
-</section>
-<section id="sponsor-description" class="level2">
-<h2 class="anchored" data-anchor-id="sponsor-description">Sponsor Description</h2>
+</div>
+</div>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Sponsor Description
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <p>In a .qmd file, submit 300-500 words, introducing the organization that you are working with. In your write-up, you should describe organization and its overarching mission, along with the mission of the specific teams in the organization that you are working with. Finally, you should describe the sponsor’s “ask” and how this relates to their mission.</p>
+</div>
+</div>
+<p>As you prepare your introduction, you should think about how you can synthesize some of what you wrote in these earlier sections into a piece writing that will frame your project to an unfamiliar audience.</p>
+<p>Note that this will require more than just copying and pasting previously written sections of the report. You should think carefully about how to integrate this writing in a meaningful way to introduce your project.</p>
 </section>
 <section id="data-description" class="level2">
 <h2 class="anchored" data-anchor-id="data-description">Data Description</h2>
-<p>In a .qmd file, submit 300-500 words, introducing the data resources that you will be working with to a lay audience. Some teams might not yet know all of these data sources, so you need only detail the ones that you know you will be working with.</p>
+<p>In 300-500 words, introduce the data resources that you will be working with to a lay audience. Some teams might not yet know all of these data sources, so you need only detail the ones that you know you will be working with.</p>
 <p>I have found in the past that detailing datasets to an audience unfamiliar with that data is really challenging. We have a tendency to want to describe the data’s technical details rather than summarizing more generally what the data represents. I’ve included an example below to help you think through how to approach this. At the very least this section should include:</p>
 <ul>
 <li>What the data represents</li>
@@ -185,7 +216,7 @@ Why am I asking you to do this?
 </section>
 <section id="detailed-methodology" class="level2">
 <h2 class="anchored" data-anchor-id="detailed-methodology">Detailed Methodology</h2>
-<p>In a .qmd file in about 800-1000 words, write a first draft of the Methods section of your final report. This is going to look quite different for each of the projects. This section might include things like:</p>
+<p>This section should be about 800-1000 words. This is going to look quite different for each of the projects. This section might include things like:</p>
 <ol type="1">
 <li>How did you acquire the data?</li>
 <li>How did you clean and format the data?</li>
@@ -201,7 +232,7 @@ Why am I asking you to do this?
 </section>
 <section id="findingsoutputs" class="level2">
 <h2 class="anchored" data-anchor-id="findingsoutputs">Findings/Outputs</h2>
-<p>In a .qmd file in about 600-800 words, write a first draft of the Results/Findings/Outputs section of your final report. This is going to look quite different for each of the projects, depending on the scope of your deliverables. This section might include things like:</p>
+<p>This section should be about 600-800 words. This is going to look quite different for each of the projects, depending on the scope of your deliverables. This section might include things like:</p>
 <ol type="1">
 <li>What were the primary findings of your statistical analyses (in relation to original research questions)? (e.g.&nbsp;“We found that…[give us key numbers, stats, and summaries of figures].”)</li>
 <li>What were some of the secondary findings of your analyses (perhaps beyond the scope of the original research questions)?</li>
@@ -209,11 +240,6 @@ Why am I asking you to do this?
 <li>What products did you produce (e.g.&nbsp;<code>R</code> packages, <code>shiny</code> dashboards), and what were some of their key features?</li>
 <li>In what ways did your deliverables match the expectations of the project sponsor?</li>
 </ol>
-</section>
-<section id="introduction" class="level2">
-<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p>Your introduction should be 300-500 words and should introduce your project to an audience unfamiliar with our capstone course. This section will be some combination of your problem definition, sponsor description, the scope of your solution, and an outline of the remaining sections of the report. As you prepare your introduction, you should think about how you can synthesize some of what you wrote in these earlier sections into a piece writing that will frame your project to an unfamiliar audience.</p>
-<p>Note that this will require more than just copying and pasting previously written sections of the report. You should think carefully about how to integrate this writing in a meaningful way to introduce your project.</p>
 </section>
 <section id="conclusion" class="level2">
 <h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
@@ -224,8 +250,29 @@ Why am I asking you to do this?
 <li>Outline some of the limitations of your approach</li>
 <li>Present some suggestions for further work (i.e.&nbsp;How could this project be extended with more time and resources?)</li>
 </ol>
+</section>
+</section>
+<section id="final-draft" class="level1">
+<h1>Final Draft</h1>
+<section id="ethics-statement" class="level2">
+<h2 class="anchored" data-anchor-id="ethics-statement">Ethics Statement</h2>
+<p>In 400-500 words, identify ethical issues that emerged in the course of your project, along with how your team grappled with/addressed them. Issues may relate to:</p>
+<ol type="1">
+<li>Data availability</li>
+<li>Reductionist data categorization or semantics</li>
+<li>Privacy and/or confidentiality concerns</li>
+<li>Potentially incorrect assumptions your team needed to make (or use of proxies)</li>
+<li>Possibility of algorithmic biases</li>
+<li>Reliance on certain data infrastructures</li>
+<li>Your team’s cultural/social identities (and what identities are not at the table)?</li>
+<li>Your team’s knowledge of/relationship with the topic or organization</li>
+<li>Challenges in public data communication</li>
+</ol>
+<p>I imagine that most teams will focus on 1-3 of these topics - not all of them.</p>
+<p>For each topic you cover in this section, you should be sure to discuss four things - 1) what was the issue? 2) why did the issue come up? 3) what social harm might emerge from the issue? 4) how did your team respond to this issue? However, I encourage you not to think of this like a checklist. The text of this section should be well-integrated into the flow of your report.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

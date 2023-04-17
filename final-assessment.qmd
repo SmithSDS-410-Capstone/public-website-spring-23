@@ -1,0 +1,29 @@
+---
+title: "Final Assessment"
+author: "Lindsay Poirier"
+format: html
+editor: visual
+---
+
+## Finalr Assessment
+
+::: callout-tip
+## Why am I asking you to do this?
+
+-   This assignment seeks to provide you with an opportunity to reflect on your personal growth in the course and more deeply engage with considerations on where you'd like to improve. Swaths of research indicate that learning improves when students are provided with explicit opportunities for this kind of reflection.
+-   The ability to critically evaluate your own performance is an important skill that you will engage no matter where your career takes you post-graduation.
+-   This assignment is designed to help strengthen your general review practices, by asking you to provide evidence and reasoning for a particular evaluation.
+-   This assignment is meant to give you more agency over how you are assessed in this course.
+:::
+
+By the last day of class, you should submit a minimum 1000-word mid-semester assessment of your work, grading yourself along each of the course's [seven dimensions](grading_contract.html). To help ensure that your responses are focused on your growth in the course, this time around I'm providing you with a prompt that you can use to structure each section. Imagine that you are on a interview for a data science position. For each section you should respond to the following interview question:
+
+> Describe a time (in capstone) when you faced a challenge related to \[dimension\]. How did you respond to the challenge? What did you learn from this experience that you will carry with you? How does this demonstrate growth?
+
+::: callout-tip
+## Keep in mind!
+
+Your grade in this course is about growth. Your justifications should **describe your growth along each dimension**, not just how you met certain criteria in the dimension. This means that when you are identifying examples to talk about in your write-up, your arguments should explain *how you developed new skills, new habits of working, or new ways of thinking through engagement in our course*.
+:::
+
+You should submit this assignment to your Github portfolio repository as a .qmd in the `reflections` folder. **Please be sure to have separate headings for each of the course's dimensions, and to clearly list the grade (A, B, C, D) you would give yourself for each.**

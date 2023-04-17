@@ -1,0 +1,46 @@
+---
+title: "Final Presentations"
+author: "Lindsay Poirier"
+format: html
+editor: visual
+---
+
+## Introduction
+
+Presenting on a project's outcomes is a key component to almost any job. Your mid-term presentation focused predominantly on the aims of your work, your project plan, and the methods you will engage to achieve your aims. The final presentation will focus predominantly on the *results of your work*.
+
+### Format
+
+You should prepare a slide deck to present in class. All members of your team will be expected to contribute to the delivery of your presentation. To ensure seamless transitions, I encourage you to practice "handing off" sections of the presentation.
+
+### Length
+
+Your mid-term presentation should be about 12 minutes long (10 minutes minimum; 13 minutes maximum). This will allow 5 minutes for question and answer. *Please rehearse ahead of time to ensure that you can meet this time benchmark.*
+
+### Content
+
+The main goal of this presentation is to present your findings and outputs to the class. The presentation should include:
+
+-   a brief introduction to your sponsor and the problem they posed
+
+-   a brief introduction to the data/systems you worked with
+
+-   a description of your project methodology (including any major shifts to your original project plan)
+
+-   a description of your key findings/outputs
+
+    -   This part should be at least a third of the presentation (\~4 minutes)
+
+    -   You may include demos/screenshots in this section
+
+    -   Be sure to *explain* the takeaways for any plots/visualizations.
+
+-   a note on ethical issues you encountered
+
+Be sure that your presentation opens with an introduction that highlights what you will discuss and closes with a conclusion that summarizes what you discussed.
+
+### Audience
+
+The audience for this presentation will be our class and all of the capstone sponors. So you can assume basic knowledge of data science and statistics, but you shouldn't assume previous exposure to your project.
+
+It will be particularly important to think through how you present your methods and findings to this audience.
